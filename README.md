@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Text Expander 2R for Android
 
 A native Android application written in Kotlin that provides real-time text expansion across all apps via an Android `AccessibilityService` and a Room database.
@@ -56,3 +57,6 @@ Open the project directory in Android Studio (Giraffe / Hedgehog / Iguana / Jell
 ```bash
 ./gradlew assembleDebug
 ```
+=======
+# Text-Expander-2R
+>>>>>>> e50980492b295a242a41d2a5239bac7e9ec63e11
