@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="accent">#F99A2A</color>
+    <color name="background">#F8F9FA</color>
+    <color name="divider">#DADCE0</color>
+    <color name="error">#D93025</color>
+    <color name="error_light">#FCE8E6</color>
+    <color name="icon_background">#F99A2A</color>
+    <color name="primary">#E66C00</color>
+    <color name="primary_dark">#B34E00</color>
+    <color name="primary_light">#FFF0E0</color>
+    <color name="success">#0F9D58</color>
+    <color name="success_light">#E6F4EA</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="text_primary">#202124</color>
+    <color name="text_secondary">#5F6368</color>
+    <color name="text_tertiary">#80868B</color>
+    <color name="warning">#F4B400</color>
+    <color name="warning_light">#FEF7E0</color>
+    <string name="accessibility_service_description">Monitors typed shortcuts (like bbs) and instantly replaces them with predefined expanded texts using efficient clipboard pasting.</string>
+    <string name="add_shortcut">Add Shortcut</string>
+    <string name="app_name">Text Expander 2R</string>
+    <string name="btn_enable_service">Enable in Settings</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
+    <string name="delete_shortcut_confirm">Are you sure you want to delete shortcut \"%1$s\"?</string>
+    <string name="edit_shortcut">Edit Shortcut</string>
+    <string name="empty_shortcuts_desc">Tap the + button below to add your first text expansion shortcut.</string>
+    <string name="empty_shortcuts_title">No shortcuts yet</string>
+    <string name="error_empty_key">Shortcut key cannot be empty</string>
+    <string name="error_empty_text">Expanded text cannot be empty</string>
+    <string name="error_key_spaces">Shortcut key cannot contain spaces</string>
+    <string name="error_text_too_large">Expanded text cannot exceed 1MB (~1,048,576 characters)</string>
+    <string name="expanded_text_hint">Enter or paste replacement text (supports up to 1MB)...</string>
+    <string name="expanded_text_label">Expanded Text</string>
+    <string name="hint_search">Search shortcuts...</string>
+    <string name="sample_bbs_desc">Be back soon! In the middle of an urgent meeting.</string>
+    <string name="save">Save</string>
+    <string name="service_active">Accessibility Service is Active</string>
+    <string name="service_active_desc">Text expansion is running and ready in any app.</string>
+    <string name="service_inactive">Accessibility Service is Disabled</string>
+    <string name="service_inactive_desc">Enable the accessibility service in system settings to allow instant text expansion as you type.</string>
+    <string name="shortcut_deleted">Shortcut deleted</string>
+    <string name="shortcut_key_hint">e.g. bbs, addr, email</string>
+    <string name="shortcut_key_label">Shortcut Key</string>
+    <string name="shortcut_saved">Shortcut saved</string>
+    <string name="title_shortcuts">Your Shortcuts</string>
+    <style name="Theme.TextExpander" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorPrimaryContainer">@color/primary_light</item>
+        <item name="colorOnPrimaryContainer">@color/primary_dark</item>
+        <item name="android:statusBarColor">@color/surface</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:colorBackground">@color/background</item>
+    </style>
+</resources>

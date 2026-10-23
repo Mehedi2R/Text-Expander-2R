@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginTop="3dp"
+    android:layout_marginBottom="3dp"
+    android:background="@drawable/bg_shortcut_card"
+    android:paddingHorizontal="14dp"
+    android:paddingVertical="11dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!-- Tactile Keycap Pill (Linear / Raycast Pro style) -->
+        <TextView
+            android:id="@+id/tvShortcutKey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_shortcut_key_pill"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="5dp"
+            android:fontFamily="monospace"
+            android:textColor="@color/pill_text"
+            android:textSize="13.5sp"
+            android:textStyle="bold"
+            tools:text=";;email" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <!-- Quick Copy Action Button -->
+        <ImageView
+            android:id="@+id/btnShortcutCopy"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:padding="6dp"
+            android:src="@drawable/ic_copy"
+            android:contentDescription="Copy"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:tint="@color/text_secondary" />
+
+        <!-- Shortcut Options Menu Button -->
+        <ImageView
+            android:id="@+id/btnShortcutMenu"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="6dp"
+            android:padding="6dp"
+            android:src="@drawable/ic_drag_handle"
+            android:contentDescription="Options"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:tint="@color/text_secondary" />
+    </LinearLayout>
+
+    <!-- Expanded text preview right below keycap -->
+    <TextView
+        android:id="@+id/tvExpandedPreview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:textColor="@color/text_primary"
+        android:textSize="14.5sp"
+        android:maxLines="3"
+        android:ellipsize="end"
+        android:lineSpacingExtra="3.5dp"
+        tools:text="Good morning! How can I help you? 😊" />
+
+</LinearLayout>

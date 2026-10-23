@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Text Expander 2R</string>
+    <string name="accessibility_service_description">Text Expander 2R uses the Accessibility Service solely to detect user-defined shortcuts and expand them into text snippets. It operates 100% offline and never collects, records, or transmits keystrokes, personal data, or passwords.</string>
+    <string name="add_shortcut">Add Shortcut</string>
+    <string name="edit_shortcut">Edit Shortcut</string>
+    <string name="paste_clipboard">Paste Clipboard</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
+    <string name="delete_shortcut_confirm">Are you sure you want to delete shortcut \"%1$s\"?</string>
+</resources>

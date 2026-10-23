@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    app:cardCornerRadius="14dp"
+    app:cardElevation="1dp"
+    app:strokeWidth="1dp"
+    app:strokeColor="@color/divider"
+    app:cardBackgroundColor="@color/surface">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="14dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- Shortcut Key Chip -->
+            <TextView
+                android:id="@+id/tvShortcutKey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_shortcut_pill"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="4dp"
+                android:fontFamily="monospace"
+                android:textColor="@color/primary"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                tools:text="bbs" />
+
+            <!-- Size / Char badge -->
+            <TextView
+                android:id="@+id/tvSizeBadge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/text_tertiary"
+                android:textSize="11sp"
+                tools:text="45 chars • 45 B" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <!-- Copy Action -->
+            <ImageButton
+                android:id="@+id/btnCopyShortcut"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_copy"
+                android:contentDescription="Copy expansion"
+                app:tint="@color/text_secondary" />
+
+            <!-- Edit Action -->
+            <ImageButton
+                android:id="@+id/btnEditShortcut"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_edit"
+                android:contentDescription="@string/edit_shortcut"
+                app:tint="@color/text_secondary" />
+
+            <!-- Delete Action -->
+            <ImageButton
+                android:id="@+id/btnDeleteShortcut"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_delete"
+                android:contentDescription="@string/delete"
+                app:tint="@color/error" />
+        </LinearLayout>
+
+        <!-- Expansion preview snippet -->
+        <TextView
+            android:id="@+id/tvExpandedPreview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:maxLines="3"
+            android:ellipsize="end"
+            android:textColor="@color/text_secondary"
+            android:textSize="13sp"
+            android:lineSpacingMultiplier="1.2"
+            tools:text="Be back soon! In the middle of an urgent meeting with clients and stakeholders." />
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

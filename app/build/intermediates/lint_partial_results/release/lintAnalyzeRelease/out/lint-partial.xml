@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 9.4.1" type="partial_results">
+    <map id="UnsafeImplicitIntentLaunch">
+            <map id="actionsSent">
+                    <map id="android.intent.action.VIEW (used to start an activity)">
+                        <location id="0"
+                            file="${:app*release*MAIN*sourceProvider*0*javaDir*0}/com/textexpander/app/MainActivity.kt"
+                            line="712"
+                            column="30"
+                            startOffset="29592"
+                            endLine="712"
+                            endColumn="92"
+                            endOffset="29654"/>
+                        <location id="1"
+                            file="${:app*release*MAIN*sourceProvider*0*javaDir*0}/com/textexpander/app/MainActivity.kt"
+                            line="725"
+                            column="30"
+                            startOffset="30036"
+                            endLine="725"
+                            endColumn="103"
+                            endOffset="30109"/>
+                        <location id="2"
+                            file="${:app*release*MAIN*sourceProvider*0*javaDir*0}/com/textexpander/app/MainActivity.kt"
+                            line="731"
+                            column="34"
+                            startOffset="30326"
+                            endLine="731"
+                            endColumn="133"
+                            endOffset="30425"/>
+                    </map>
+                    <map id="android.settings.ACCESSIBILITY_SETTINGS (used to start an activity)">
+                        <location id="0"
+                            file="${:app*release*MAIN*sourceProvider*0*javaDir*0}/com/textexpander/app/MainActivity.kt"
+                            line="1264"
+                            column="26"
+                            startOffset="54641"
+                            endLine="1264"
+                            endColumn="72"
+                            endOffset="54687"/>
+                        <location id="1"
+                            file="${:app*release*MAIN*sourceProvider*0*javaDir*0}/com/textexpander/app/OnboardingActivity.kt"
+                            line="94"
+                            column="30"
+                            startOffset="3525"
+                            endLine="94"
+                            endColumn="76"
+                            endOffset="3571"/>
+                    </map>
+                    <map id="android.settings.APPLICATION_DETAILS_SETTINGS (used to start an activity)">
+                        <location id="0"
+                            file="${:app*release*MAIN*sourceProvider*0*javaDir*0}/com/textexpander/app/MainActivity.kt"
+                            line="1282"
+                            column="34"
+                            startOffset="55538"
+                            endLine="1282"
+                            endColumn="86"
+                            endOffset="55590"/>
+                        <location id="1"
+                            file="${:app*release*MAIN*sourceProvider*0*javaDir*0}/com/textexpander/app/MainActivity.kt"
+                            line="1311"
+                            column="34"
+                            startOffset="56733"
+                            endLine="1311"
+                            endColumn="86"
+                            endOffset="56785"/>
+                        <location id="2"
+                            file="${:app*release*MAIN*sourceProvider*0*javaDir*0}/com/textexpander/app/OnboardingActivity.kt"
+                            line="82"
+                            column="38"
+                            startOffset="3058"
+                            endLine="82"
+                            endColumn="90"
+                            endOffset="3110"/>
+                        <location id="3"
+                            file="${:app*release*MAIN*sourceProvider*0*javaDir*0}/com/textexpander/app/OnboardingActivity.kt"
+                            line="112"
+                            column="30"
+                            startOffset="4347"
+                            endLine="112"
+                            endColumn="82"
+                            endOffset="4399"/>
+                    </map>
+                    <map id="android.settings.IGNORE_BATTERY_OPTIMIZATION_SETTINGS (used to start an activity)">
+                        <location id="0"
+                            file="${:app*release*MAIN*sourceProvider*0*javaDir*0}/com/textexpander/app/MainActivity.kt"
+                            line="1305"
+                            column="30"
+                            startOffset="56456"
+                            endLine="1305"
+                            endColumn="90"
+                            endOffset="56516"/>
+                        <location id="1"
+                            file="${:app*release*MAIN*sourceProvider*0*javaDir*0}/com/textexpander/app/OnboardingActivity.kt"
+                            line="76"
+                            column="34"
+                            startOffset="2757"
+                            endLine="76"
+                            endColumn="94"
+                            endOffset="2817"/>
+                    </map>
+                    <map id="android.settings.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS (used to start an activity)">
+                        <location id="0"
+                            file="${:app*release*MAIN*sourceProvider*0*javaDir*0}/com/textexpander/app/MainActivity.kt"
+                            line="1297"
+                            column="30"
+                            startOffset="56116"
+                            endLine="1297"
+                            endColumn="90"
+                            endOffset="56176"/>
+                        <location id="1"
+                            file="${:app*release*MAIN*sourceProvider*0*javaDir*0}/com/textexpander/app/OnboardingActivity.kt"
+                            line="68"
+                            column="34"
+                            startOffset="2385"
+                            endLine="68"
+                            endColumn="94"
+                            endOffset="2445"/>
+                    </map>
+            </map>
+    </map>
+    <map id="UnsafeIntentLaunch">
+            <map id="unprotected">
+                <entry
+                    name="com.textexpander.app.MainActivity"
+                    boolean="true"/>
+                <entry
+                    name="com.textexpander.app.OnboardingActivity"
+                    boolean="true"/>
+            </map>
+    </map>
+    <map id="UnusedResources">
+        <entry
+            name="model"
+            string="attr[selectableItemBackgroundBorderless(R),selectableItemBackground(R)],color[switch_thumb_selector(U),switch_track_selector(U),primary(U),bottom_nav_indicator(U),dock_btn_add_pressed(U),dock_btn_add(U),dock_peach(U),surface(U),divider(U),pill_bg(U),pill_border(U),primary_light(U),success(U),text_secondary(U),text_tertiary(U),warning(U),background(U),text_primary(U),bottom_nav_bg(U),bottom_nav_selected(U),bottom_nav_unselected(U),dock_icon_tint(U),pill_text(U),error(U)],drawable[app_logo(U),bg_app_logo_glow(U),bg_bento_chip(U),bg_bento_chip_clickable(U),bg_bottom_nav_indicator(U),bg_btn_privacy(U),bg_btn_rate_app(U),bg_circle_arrow(U),bg_circle_arrow_outline(U),bg_circle_warning(U),bg_dock_add_btn(U),bg_floating_dock(U),bg_floating_suggestion_card(U),bg_header_card(U),bg_image_frame(U),bg_info_pill_box(U),bg_onboarding_card_1(U),bg_onboarding_card_2(U),bg_restricted_card(U),bg_settings_card_body_expanded(U),bg_settings_card_collapsed(U),bg_settings_card_header_expanded(U),bg_shortcut_card(U),bg_shortcut_key_pill(U),bg_stats_pill(U),bg_suggestion_circle_btn(U),bg_suggestion_key_pill(U),bg_version_pill(U),guide_restricted_settings(U),ic_action_copy(U),ic_action_delete(U),ic_action_edit(U),ic_add(U),ic_arrow_back(U),ic_arrow_right(U),ic_bolt(U),ic_chart_bars(U),ic_check_circle(U),ic_chevron_down(U),ic_chevron_up(U),ic_clipboard_search(U),ic_cloud_upload(U),ic_copy(U),ic_drag_handle(U),ic_empty_snippet(U),ic_expand_more_less(U),ic_folder(U),ic_globe(U),ic_grid_apps(U),ic_grip_dots(U),ic_info(U),ic_interaction_toast(U),ic_launcher_background(U),ic_launcher_foreground(U),ic_lock(U),ic_match_begin(U),ic_overlay_stack(U),ic_person(U),ic_power(U),ic_restore(U),ic_root(U),ic_search(U),ic_settings_about(U),ic_settings_data(U),ic_settings_detection(U),ic_settings_interaction(U),ic_settings_statistics(U),ic_settings_suggestion(U),ic_share_anonymous(U),ic_shield_check(U),ic_star(U),ic_tab_clipboard(U),ic_tab_settings(U),ic_tab_text(U),ic_vibrate_phone(U),ic_warning(U)],id[cardHeaderBanner(U),btnHeaderBack(U),tvHeaderTitle(U),tilShortcutKey(U),etShortcutKey(U),tilExpandedText(U),etExpandedText(U),tvSizeCounter(U),btnPasteClipboard(U),btnCancel(U),btnSave(U),imgHeaderIcon(U),tvHeaderSubtitle(U),pillHeaderStats(U),tvHeaderStatsCount(U),btnHeaderInfo(U),layoutSearchBar(U),tilSearch(D),etSearch(U),viewTabText(U),rvFolders(U),rvShortcuts(U),layoutEmptyShortcuts(U),viewTabClipboard(U),rvClipboard(U),viewTabSettings(U),cardSettingsAccessibility(U),imgSettingsStatusIcon(D),tvSettingsStatusTitle(D),tvSettingsStatusDesc(D),btnSettingsToggleService(U),btnSettingsFixRestricted(U),cardSettingsBackground(U),btnSettingsAllowBackground(U),cardSettingDetection(D),headerDetection(U),arrowDetection(U),bodyDetection(U),switchEnableDetection(U),switchOptimizedDetection(U),switchDetectInAllApps(U),switchDetectAllLanguages(U),switchMatchFromBeginning(U),cardSettingSuggestion(D),headerSuggestion(U),arrowSuggestion(U),bodySuggestion(U),switchEnableSuggestionOverlay(U),cardSettingClipboard(D),headerClipboard(U),arrowClipboard(U),bodyClipboard(U),switchEnableClipboard(U),cardSettingData(D),headerData(U),arrowData(U),bodyData(U),rowBackupFolder(U),tvBackupFolderPath(U),rowBackupInfo(D),tvBackupInfoDetails(U),rowCreateBackup(U),rowRestoreBackup(U),cardSettingStatistics(D),headerStatistics(U),arrowStatistics(U),bodyStatistics(U),switchEnableStatistics(U),switchShareStatistics(U),cardSettingInteraction(D),headerInteraction(U),arrowInteraction(U),bodyInteraction(U),switchShowClipboardAccess(U),switchEnableHapticFeedback(U),cardSettingAbout(D),headerAbout(U),arrowAbout(U),bodyAbout(U),tvAboutVersion(U),btnAboutDeveloper(U),btnAboutPrivacyPolicy(U),btnAboutRateApp(U),layoutBottomNav(D),tabText(U),indicatorText(U),iconText(U),labelText(U),tabClipboard(U),indicatorClipboard(U),iconClipboard(U),labelClipboard(U),tabSettings(U),indicatorSettings(U),iconSettings(U),labelSettings(U),floatingDock(U),btnDockSearch(U),btnDockFolder(U),btnDockAdd(U),cardAllowBackground(U),iconContainerBg(D),imgArrowBg(U),tvTitleBg(D),tvSubtitleBg(U),cardEnableAccessibility(U),iconContainerAcc(D),imgArrowAcc(U),tvTitleAcc(D),tvSubtitleAcc(U),cardRestrictedFix(D),btnToggleRestrictedGuide(U),tvTitleRestricted(D),tvSubtitleRestricted(D),imgArrowRestricted(U),layoutRestrictedDetails(U),btnOpenAppInfo(U),imgGuideRestricted(D),btnContinue(U),tilFolderName(D),etFolderName(U),btnCancelFolder(U),btnCreateFolder(U),tvClipboardContent(U),btnCopyClipboardItem(U),btnConvertToShortcut(U),tvClipboardCount(U),imgActionIcon(U),tvActionTitle(U),rootFolderItem(D),imgFolderIcon(D),tvFolderName(U),tvFolderCount(U),tvShortcutKey(U),btnShortcutCopy(U),btnShortcutMenu(U),tvExpandedPreview(U),rootSuggestionBar(U),tvSuggestionKey(U),btnSuggestionToggleExpand(U),imgSuggestionChevron(U),scrollSuggestionText(U),tvSuggestionText(U),layoutSuggestionGrip(U)],layout[activity_add_edit_shortcut(U),activity_main(U),item_folder_category(U),item_shortcut(U),item_clipboard(U),activity_onboarding(U),dialog_create_folder(U),item_dialog_action(U),layout_floating_suggestion(U)],mipmap[ic_launcher(U),ic_launcher_round(U)],string[app_name(U),add_shortcut(U),shortcut_key_label(U),helper_shortcut_key(U),shortcut_key_hint(U),expanded_text_label(U),expanded_text_hint(U),paste_clipboard(U),cancel(U),save(U),accessibility_service_description(U),edit_shortcut(U),delete(U),delete_shortcut_confirm(U)],style[Theme_TextExpander(U),Theme_TextExpander_InstantPage(U),Widget_Material3_Button_TextButton(R),Widget_Material3_Button(R),Widget_Material3_Button_TonalButton(R),Theme_Material3_DayNight_NoActionBar(R),WindowNoAnimation(U)],xml[data_extraction_rules(U),backup_rules(U),accessibility_service_config(U)];3^4,1e^5,21^4,22^4,24^6^7,25^8,26^9^a,27^9^a,2a^9^a,2b^9^a,2c^9,2d^a,2e^9^a,2f^9^a,30^9^a,31^b^c,32^d,33^b^c,34^b^c,3d^4,3f^e,44^f,57^10,65^11,f6^12^27^0^3b^13^102^103^4^104^105^106^107^10^1^108^109^111^10a^112,f7^12^27^0^3b^13^56^f^32^3d^4^4c^57^f8^f9^46^fa^9^a^65^11^113^111^2e^5a^40^2d^54^2^3^4a^49^51^5d^52^61^42^59^1^48^43^55^5c^3e^5e^5b^4d^64^58^1b^101^1a^35^21^e^1c^5f^1d^53^1f^50^20^60^14^1e^63^15^16^62^25^17^24^3a,f8^30^48^13^f^3c^10,f9^30^31^18^0^44^f^45^13,fa^30^13^0^44^4^63^f^10,fb^12^101^1a^13^f^29^10^2a^21^3c^2b^22^4^2c^23^65^40^a^28^36,fc^27^48^13^4^111^112,fd^1,fe^26^34^18^33^47^f^13^4b^10,ff^4e^4f,100^4e^4f,10f^114^4^d^12^14,110^10f^115,118^10b;;;"/>
+    </map>
+
+</incidents>

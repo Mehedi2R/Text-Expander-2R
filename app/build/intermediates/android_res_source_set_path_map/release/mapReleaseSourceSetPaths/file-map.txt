@@ -1,0 +1,9 @@
+com.textexpander.app-pngs-0 D:\Android\Text Extender\app\build\generated\res\pngs\release
+com.textexpander.app-updated_navigation_xml-1 D:\Android\Text Extender\app\build\generated\updated_navigation_xml\release
+com.textexpander.app-packageReleaseResources-2 D:\Android\Text Extender\app\build\intermediates\incremental\release\packageReleaseResources\merged.dir
+com.textexpander.app-packageReleaseResources-3 D:\Android\Text Extender\app\build\intermediates\incremental\release\packageReleaseResources\stripped.dir
+com.textexpander.app-merged-not-compiled-resources-4 D:\Android\Text Extender\app\build\intermediates\merged-not-compiled-resources\release
+com.textexpander.app-release-5 D:\Android\Text Extender\app\build\intermediates\merged_res\release\mergeReleaseResources
+com.textexpander.app-main-6 D:\Android\Text Extender\app\src\main\res
+com.textexpander.app-release-7 D:\Android\Text Extender\app\src\release\res
+gradleHome-0 C:\Users\KCR\.gradle

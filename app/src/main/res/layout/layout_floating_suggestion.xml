@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootSuggestionBar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_floating_suggestion_card"
+    android:elevation="10dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:paddingStart="12dp"
+    android:paddingEnd="12dp"
+    android:paddingTop="8dp"
+    android:paddingBottom="4dp">
+
+    <!-- Top Row: Shortcut Key Pill + Expand/Collapse Button -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!-- Shortcut key pill e.g. "ss" -->
+        <TextView
+            android:id="@+id/tvSuggestionKey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_suggestion_key_pill"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="3dp"
+            android:textColor="@color/pill_text"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            tools:text="ss" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <!-- Human Typing Toggle Container at Right Corner -->
+        <LinearLayout
+            android:id="@+id/layoutHumanTyping"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="4dp"
+            android:paddingEnd="2dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <TextView
+                android:id="@+id/tvHumanTypingLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Typing"
+                android:textSize="11.5sp"
+                android:textColor="@color/text_secondary"
+                android:layout_marginEnd="3dp" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchHumanTyping"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                app:thumbTint="@color/switch_thumb_selector"
+                app:trackTint="@color/switch_track_selector"
+                tools:checked="false" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Scrollable Content: User can hold and drag finger up-down to scroll the full text -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollSuggestionText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="4dp"
+        android:scrollbars="vertical"
+        android:fadeScrollbars="false"
+        android:overScrollMode="ifContentScrolls"
+        android:fillViewport="true">
+
+        <TextView
+            android:id="@+id/tvSuggestionText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_primary"
+            android:textSize="14.5sp"
+            android:textStyle="normal"
+            android:lineSpacingExtra="2.5dp"
+            tools:text="Expanded replacement text preview" />
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Bottom Grip Handle Dots (:::) -->
+    <LinearLayout
+        android:id="@+id/layoutSuggestionGrip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingVertical="2dp">
+
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="10dp"
+            android:src="@drawable/ic_grip_dots"
+            android:contentDescription="Drag Handle"
+            app:tint="@color/text_tertiary" />
+    </LinearLayout>
+
+</LinearLayout>

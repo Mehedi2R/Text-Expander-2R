@@ -1,0 +1,438 @@
+[
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\mipmap-xxxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_ic_person.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\ic_person.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_ic_match_begin.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\ic_match_begin.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_bg_header_card.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\bg_header_card.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_ic_cloud_upload.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\ic_cloud_upload.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_ic_settings_about.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\ic_settings_about.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_bg_btn_privacy.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\bg_btn_privacy.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_bg_version_pill.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\bg_version_pill.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_app_logo.png.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\app_logo.png"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_bg_noir_keycap.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\bg_noir_keycap.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_ic_copy.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\ic_copy.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_ic_lock.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\ic_lock.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_bg_bottom_nav_indicator.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\bg_bottom_nav_indicator.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_ic_settings_statistics.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\ic_settings_statistics.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_bg_noir_btn_save.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\bg_noir_btn_save.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_ic_info.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\ic_info.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_bg_settings_card_collapsed.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\bg_settings_card_collapsed.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_bg_onboarding_card_2.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\bg_onboarding_card_2.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_bg_settings_card_header_expanded.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\bg_settings_card_header_expanded.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_ic_empty_snippet.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\ic_empty_snippet.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_bg_bento_chip_clickable.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\bg_bento_chip_clickable.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_bg_shortcut_card.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\bg_shortcut_card.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_ic_grip_dots.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\ic_grip_dots.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\layout_layout_floating_suggestion.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\layout\\layout_floating_suggestion.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_ic_check_circle.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\ic_check_circle.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\xml_accessibility_service_config.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\xml\\accessibility_service_config.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_bg_circle_arrow.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\bg_circle_arrow.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_ic_action_edit.png.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\ic_action_edit.png"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_ic_star.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\ic_star.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_bg_circle_warning.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\bg_circle_warning.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\mipmap-xhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\mipmap-mdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_bg_shortcut_key_pill.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\bg_shortcut_key_pill.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_ic_share_anonymous.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\ic_share_anonymous.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_bg_top_header_bar.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\bg_top_header_bar.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_ic_add.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\ic_add.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_bg_noir_btn_cancel.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\bg_noir_btn_cancel.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_bg_btn_rate_app.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\bg_btn_rate_app.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_ic_interaction_toast.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\ic_interaction_toast.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_ic_action_delete.png.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\ic_action_delete.png"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\color_switch_track_selector.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\color\\switch_track_selector.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\layout_item_shortcut.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\layout\\item_shortcut.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_ic_arrow_right.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\ic_arrow_right.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_ic_chart_bars.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\ic_chart_bars.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_guide_restricted_settings.jpg.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\guide_restricted_settings.jpg"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_bg_restricted_card.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\bg_restricted_card.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_ic_settings_suggestion.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\ic_settings_suggestion.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_ic_search.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\ic_search.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_bg_info_pill_box.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\bg_info_pill_box.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_bg_onboarding_card_1.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\bg_onboarding_card_1.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\layout_item_folder_category.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\layout\\item_folder_category.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_ic_arrow_back.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\ic_arrow_back.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_ic_tab_settings.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\ic_tab_settings.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\layout_activity_onboarding.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\layout\\activity_onboarding.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_ic_clipboard_search.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\ic_clipboard_search.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_ic_folder.png.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\ic_folder.png"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_ic_vibrate_phone.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\ic_vibrate_phone.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_bg_noir_paste_chip.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\bg_noir_paste_chip.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_bg_dock_add_btn.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\bg_dock_add_btn.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_ic_action_copy.png.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\ic_action_copy.png"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_ic_overlay_stack.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\ic_overlay_stack.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_bg_floating_dock.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\bg_floating_dock.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_bg_settings_card_body_expanded.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\bg_settings_card_body_expanded.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\layout_activity_add_edit_shortcut.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\layout\\activity_add_edit_shortcut.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_ic_root.png.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\ic_root.png"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_ic_settings_detection.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\ic_settings_detection.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_bg_suggestion_key_pill.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\bg_suggestion_key_pill.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\layout_item_dialog_action.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\layout\\item_dialog_action.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_ic_tab_text.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\ic_tab_text.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_ic_restore.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\ic_restore.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_ic_tab_clipboard.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\ic_tab_clipboard.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_ic_warning.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\ic_warning.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_bg_noir_card.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\bg_noir_card.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_ic_drag_handle.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\ic_drag_handle.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_ic_power.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\ic_power.xml"
+    },
+    {
+        "merged": "com.textexpander.app-release-41:/xml_accessibility_service_config.xml.flat",
+        "source": "com.textexpander.app-main-42:/xml/accessibility_service_config.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_ic_settings_data.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\ic_settings_data.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_bg_floating_suggestion_card.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\bg_floating_suggestion_card.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_bg_bento_chip.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\bg_bento_chip.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_ic_chevron_up.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\ic_chevron_up.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_bg_app_logo_glow.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\bg_app_logo_glow.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_ic_grid_apps.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\ic_grid_apps.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_bg_folder_badge_noir.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\bg_folder_badge_noir.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\layout_item_clipboard.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\layout\\item_clipboard.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_ic_chevron_down.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\ic_chevron_down.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\layout_dialog_create_folder.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\layout\\dialog_create_folder.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_ic_bolt.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\ic_bolt.xml"
+    },
+    {
+        "merged": "com.textexpander.app-release-41:/layout_activity_main.xml.flat",
+        "source": "com.textexpander.app-main-42:/layout/activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\mipmap-xxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_ic_settings_interaction.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\ic_settings_interaction.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\mipmap-hdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_ic_globe.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\ic_globe.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_bg_image_frame.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\bg_image_frame.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\color_switch_thumb_selector.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\color\\switch_thumb_selector.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_bg_circle_arrow_outline.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\bg_circle_arrow_outline.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_ic_shield_check.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\ic_shield_check.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_bg_stats_pill.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\bg_stats_pill.xml"
+    }
+]

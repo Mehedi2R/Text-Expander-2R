@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "com.textexpander.app-mergeDebugResources-36:/layout/dialog_add_edit_shortcut.xml",
+        "source": "com.textexpander.app-main-39:/layout/dialog_add_edit_shortcut.xml"
+    },
+    {
+        "merged": "com.textexpander.app-mergeDebugResources-36:/layout/activity_main.xml",
+        "source": "com.textexpander.app-main-39:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.textexpander.app-mergeDebugResources-36:/layout/item_shortcut.xml",
+        "source": "com.textexpander.app-main-39:/layout/item_shortcut.xml"
+    }
+]

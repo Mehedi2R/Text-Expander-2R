@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Linear / Raycast Pro Midnight Charcoal Palette -->
+    <color name="primary">#38BDF8</color> <!-- Electric Sky Cyan -->
+    <color name="primary_light">#162C3F</color> <!-- Glowing Cyan Container -->
+
+    <color name="background">#0B0E14</color> <!-- Deep Space Midnight Slate -->
+    <color name="surface">#141824</color> <!-- Raycast Card Dark Surface -->
+
+    <!-- Header & Dock Palette -->
+    <color name="dock_peach">#141924</color>
+    <color name="dock_btn_add">#38BDF8</color> <!-- Glowing Cyan Pop Button -->
+    <color name="dock_btn_add_pressed">#0284C7</color>
+    <color name="dock_icon_tint">#94A3B8</color>
+
+    <!-- Shortcut Keycap Pill & Typography -->
+    <color name="pill_bg">#1C2333</color>
+    <color name="pill_border">#2D384E</color>
+    <color name="pill_text">#38BDF8</color>
+    <color name="text_primary">#F8FAFC</color>
+    <color name="text_secondary">#94A3B8</color>
+    <color name="text_tertiary">#64748B</color>
+    <color name="divider">#222938</color>
+
+    <!-- Bottom Navigation Bar -->
+    <color name="bottom_nav_bg">#0D1017</color>
+    <color name="bottom_nav_indicator">#162C3F</color>
+    <color name="bottom_nav_selected">#38BDF8</color>
+    <color name="bottom_nav_unselected">#64748B</color>
+
+    <!-- Status Colors -->
+    <color name="success">#10B981</color>
+    <color name="warning">#F59E0B</color>
+    <color name="error">#EF4444</color>
+</resources>

@@ -1,0 +1,122 @@
+[
+    {
+        "merged": "com.textexpander.app-debug-37:/xml_data_extraction_rules.xml.flat",
+        "source": "com.textexpander.app-main-39:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.textexpander.app-debug-37:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "com.textexpander.app-main-39:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.textexpander.app-debug-37:/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "com.textexpander.app-main-39:/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.textexpander.app-debug-37:/drawable_ic_warning.xml.flat",
+        "source": "com.textexpander.app-main-39:/drawable/ic_warning.xml"
+    },
+    {
+        "merged": "com.textexpander.app-debug-37:/drawable_ic_copy.xml.flat",
+        "source": "com.textexpander.app-main-39:/drawable/ic_copy.xml"
+    },
+    {
+        "merged": "com.textexpander.app-debug-37:/xml_accessibility_service_config.xml.flat",
+        "source": "com.textexpander.app-main-39:/xml/accessibility_service_config.xml"
+    },
+    {
+        "merged": "com.textexpander.app-debug-37:/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "com.textexpander.app-main-39:/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.textexpander.app-debug-37:/drawable_ic_bolt.xml.flat",
+        "source": "com.textexpander.app-main-39:/drawable/ic_bolt.xml"
+    },
+    {
+        "merged": "com.textexpander.app-debug-37:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.textexpander.app-main-39:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.textexpander.app-debug-37:/layout_activity_main.xml.flat",
+        "source": "com.textexpander.app-main-39:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.textexpander.app-debug-37:/drawable_ic_edit.xml.flat",
+        "source": "com.textexpander.app-main-39:/drawable/ic_edit.xml"
+    },
+    {
+        "merged": "com.textexpander.app-debug-37:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "com.textexpander.app-main-39:/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.textexpander.app-debug-37:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "com.textexpander.app-main-39:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.textexpander.app-debug-37:/drawable_ic_search.xml.flat",
+        "source": "com.textexpander.app-main-39:/drawable/ic_search.xml"
+    },
+    {
+        "merged": "com.textexpander.app-debug-37:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "com.textexpander.app-main-39:/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.textexpander.app-debug-37:/drawable_ic_add.xml.flat",
+        "source": "com.textexpander.app-main-39:/drawable/ic_add.xml"
+    },
+    {
+        "merged": "com.textexpander.app-debug-37:/drawable_app_logo.png.flat",
+        "source": "com.textexpander.app-main-39:/drawable/app_logo.png"
+    },
+    {
+        "merged": "com.textexpander.app-debug-37:/layout_item_shortcut.xml.flat",
+        "source": "com.textexpander.app-main-39:/layout/item_shortcut.xml"
+    },
+    {
+        "merged": "com.textexpander.app-debug-37:/drawable_ic_check_circle.xml.flat",
+        "source": "com.textexpander.app-main-39:/drawable/ic_check_circle.xml"
+    },
+    {
+        "merged": "com.textexpander.app-debug-37:/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "com.textexpander.app-main-39:/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.textexpander.app-debug-37:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.textexpander.app-main-39:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.textexpander.app-debug-37:/drawable_ic_delete.xml.flat",
+        "source": "com.textexpander.app-main-39:/drawable/ic_delete.xml"
+    },
+    {
+        "merged": "com.textexpander.app-debug-37:/drawable_bg_shortcut_pill.xml.flat",
+        "source": "com.textexpander.app-main-39:/drawable/bg_shortcut_pill.xml"
+    },
+    {
+        "merged": "com.textexpander.app-debug-37:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "com.textexpander.app-main-39:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.textexpander.app-debug-37:/xml_backup_rules.xml.flat",
+        "source": "com.textexpander.app-main-39:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.textexpander.app-debug-37:/drawable_ic_launcher_foreground.png.flat",
+        "source": "com.textexpander.app-main-39:/drawable/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.textexpander.app-debug-37:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "com.textexpander.app-main-39:/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.textexpander.app-debug-37:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.textexpander.app-main-39:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.textexpander.app-debug-37:/layout_dialog_add_edit_shortcut.xml.flat",
+        "source": "com.textexpander.app-main-39:/layout/dialog_add_edit_shortcut.xml"
+    },
+    {
+        "merged": "com.textexpander.app-debug-37:/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "com.textexpander.app-main-39:/mipmap-mdpi/ic_launcher_round.png"
+    }
+]

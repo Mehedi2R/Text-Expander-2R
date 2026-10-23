@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.textexpander.app-mergeReleaseResources-38:/values-h720dp-v13/values-h720dp-v13.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\KCR\\.gradle\\caches\\9.7.1\\transforms\\322e2159f25bfa8cefac667126698e35\\transformed\\appcompat-1.6.1\\res\\values-h720dp-v13\\values-h720dp-v13.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "66",
+                        "endOffsets": "117"
+                    }
+                }
+            ]
+        }
+    ]
+}
