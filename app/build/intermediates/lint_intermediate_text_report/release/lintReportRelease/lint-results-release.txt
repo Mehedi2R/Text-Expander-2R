@@ -1,25 +1,3 @@
-D:\Android\Text Extender\app\src\main\java\com\textexpander\app\MainActivity.kt:1257: Warning: Implicitly using the default locale is a common source of bugs: Use String.format(Locale, ...) instead [DefaultLocale]
-            bytes < 1024 * 1024 -> String.format("%.1f KB", bytes / 1024.0)
-                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\java\com\textexpander\app\MainActivity.kt:1258: Warning: Implicitly using the default locale is a common source of bugs: Use String.format(Locale, ...) instead [DefaultLocale]
-            else -> String.format("%.2f MB", bytes / (1024.0 * 1024.0))
-                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-   Explanation for issues of type "DefaultLocale":
-   Calling String#toLowerCase() or #toUpperCase() without specifying an
-   explicit locale is a common source of bugs. The reason for that is that
-   those methods will use the current locale on the user's device, and even
-   though the code appears to work correctly when you are developing the app,
-   it will fail in some locales. For example, in the Turkish locale, the
-   uppercase replacement for i is not I.
-
-   If you want the methods to just perform ASCII replacement, for example to
-   convert an enum name, call String#toUpperCase(Locale.ROOT) instead. If you
-   really want to use the current locale, call
-   String#toUpperCase(Locale.getDefault()) instead.
-
-   https://developer.android.com/reference/java/util/Locale.html#default_locale
-
 D:\Android\Text Extender\app\build.gradle.kts:12: Warning: Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the android.os.Build.VERSION_CODES javadoc for details. [OldTargetApi]
         targetSdk = 35
         ~~~~~~~~~~~~~~
@@ -42,7 +20,7 @@ D:\Android\Text Extender\app\build.gradle.kts:12: Warning: Not targeting the lat
 
    https://developer.android.com/distribute/best-practices/develop/target-sdk.html
 
-D:\Android\Text Extender\app\src\main\java\com\textexpander\app\service\TextExpanderAccessibilityService.kt:649: Warning: Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout's root element) [InflateParams]
+D:\Android\Text Extender\app\src\main\java\com\textexpander\app\service\TextExpanderAccessibilityService.kt:864: Warning: Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout's root element) [InflateParams]
             val view = inflater.inflate(R.layout.layout_floating_suggestion, null)
                                                                              ~~~~
 
@@ -52,6 +30,17 @@ D:\Android\Text Extender\app\src\main\java\com\textexpander\app\service\TextExpa
    ignored.
 
    https://www.bignerdranch.com/blog/understanding-androids-layoutinflater-inflate/
+
+D:\Android\Text Extender\gradle\wrapper\gradle-wrapper.properties:3: Warning: A newer version of Gradle than 9.7.1 is available: 9.8.2 [AndroidGradlePluginVersion]
+distributionUrl=https\://services.gradle.org/distributions/gradle-9.7.1-bin.zip
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "AndroidGradlePluginVersion":
+   This detector looks for usage of the Android Gradle Plugin where the
+   version you are using is not the current stable release. Using older
+   versions is fine, and there are cases where you deliberately want to stick
+   with an older version. However, you may simply not be aware that a more
+   recent version is available, and that is what this lint check helps find.
 
 D:\Android\Text Extender\app\build.gradle.kts:7: Warning: A newer version of compileSdk than 35 is available: 37 [GradleDependency]
     compileSdk = 35
@@ -86,6 +75,9 @@ room = "2.6.1"
 D:\Android\Text Extender\gradle\libs.versions.toml:12: Warning: A newer version of androidx.documentfile:documentfile than 1.0.1 is available: 1.1.0 [GradleDependency]
 documentfile = "1.0.1"
                ~~~~~~~
+D:\Android\Text Extender\gradle\libs.versions.toml:13: Warning: A newer version of androidx.work:work-runtime-ktx than 2.9.1 is available: 2.12.0 [GradleDependency]
+work = "2.9.1"
+       ~~~~~~~
 
    Explanation for issues of type "GradleDependency":
    This detector looks for usages of libraries where the version you are using
@@ -94,12 +86,6 @@ documentfile = "1.0.1"
    However, you may simply not be aware that a more recent version is
    available, and that is what this lint check helps find.
 
-D:\Android\Text Extender\gradle\libs.versions.toml:3: Warning: A newer version of org.jetbrains.kotlin.android than 2.2.10 is available: 2.4.20 [NewerVersionAvailable]
-kotlin = "2.2.10"
-         ~~~~~~~~
-D:\Android\Text Extender\gradle\libs.versions.toml:3: Warning: A newer version of org.jetbrains.kotlin.kapt than 2.2.10 is available: 2.4.20 [NewerVersionAvailable]
-kotlin = "2.2.10"
-         ~~~~~~~~
 D:\Android\Text Extender\gradle\libs.versions.toml:10: Warning: A newer version of org.jetbrains.kotlinx:kotlinx-coroutines-android than 1.8.0 is available: 1.11.0 [NewerVersionAvailable]
 coroutines = "1.8.0"
              ~~~~~~~
@@ -137,18 +123,24 @@ D:\Android\Text Extender\app\src\main\res\values\strings.xml:3: Warning: Formatt
 
    https://developer.android.com/guide/topics/resources/string-resource.html#Plurals
 
-D:\Android\Text Extender\app\src\main\java\com\textexpander\app\MainActivity.kt:1296: Warning: Unnecessary; SDK_INT is always >= 26 [ObsoleteSdkInt]
+D:\Android\Text Extender\app\src\main\java\com\textexpander\app\MainActivity.kt:1370: Warning: Unnecessary; SDK_INT is always >= 26 [ObsoleteSdkInt]
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\java\com\textexpander\app\OnboardingActivity.kt:67: Warning: Unnecessary; SDK_INT is always >= 26 [ObsoleteSdkInt]
+D:\Android\Text Extender\app\src\main\java\com\textexpander\app\OnboardingActivity.kt:65: Warning: Unnecessary; SDK_INT is always >= 26 [ObsoleteSdkInt]
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\java\com\textexpander\app\OnboardingActivity.kt:152: Warning: Unnecessary; SDK_INT is always >= 26 [ObsoleteSdkInt]
+D:\Android\Text Extender\app\src\main\java\com\textexpander\app\OnboardingActivity.kt:171: Warning: Unnecessary; SDK_INT is always >= 26 [ObsoleteSdkInt]
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\java\com\textexpander\app\service\TextExpanderAccessibilityService.kt:1099: Warning: Unnecessary; SDK_INT is always >= 26 [ObsoleteSdkInt]
+D:\Android\Text Extender\app\src\main\java\com\textexpander\app\service\TextExpanderAccessibilityService.kt:1450: Warning: Unnecessary; SDK_INT is always >= 26 [ObsoleteSdkInt]
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\Android\Text Extender\app\src\main\java\com\textexpander\app\service\TextExpanderForegroundService.kt:129: Warning: Unnecessary; SDK_INT is always >= 26 [ObsoleteSdkInt]
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\Android\Text Extender\app\src\main\java\com\textexpander\app\service\TextExpanderForegroundService.kt:149: Warning: Unnecessary; SDK_INT is always >= 26 [ObsoleteSdkInt]
+        val flags = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 D:\Android\Text Extender\app\src\main\res\mipmap-anydpi-v26: Warning: This folder configuration (v26) is unnecessary; minSdkVersion is 26. Merge all the resources in this folder into mipmap-anydpi. [ObsoleteSdkInt]
 
    Explanation for issues of type "ObsoleteSdkInt":
@@ -160,7 +152,7 @@ D:\Android\Text Extender\app\src\main\res\mipmap-anydpi-v26: Warning: This folde
    where the version qualifier is less than or equal to the minSdkVersion,
    where the contents should be merged into the best folder.
 
-D:\Android\Text Extender\app\src\main\java\com\textexpander\app\service\TextExpanderAccessibilityService.kt:58: Warning: Do not place Android context classes in static fields (static reference to TextExpanderAccessibilityService which has field floatingView pointing to View); this is a memory leak [StaticFieldLeak]
+D:\Android\Text Extender\app\src\main\java\com\textexpander\app\service\TextExpanderAccessibilityService.kt:63: Warning: Do not place Android context classes in static fields (static reference to TextExpanderAccessibilityService which has field floatingView pointing to View); this is a memory leak [StaticFieldLeak]
         @Volatile
         ^
 
@@ -178,7 +170,7 @@ D:\Android\Text Extender\app\src\main\java\com\textexpander\app\service\TextExpa
 
    ViewModel classes should never point to Views or non-application Contexts.
 
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:188: Warning: This tag and its children can be replaced by one <TextView/> and a compound drawable [UseCompoundDrawables]
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:182: Warning: This tag and its children can be replaced by one <TextView/> and a compound drawable [UseCompoundDrawables]
                 <LinearLayout
                  ~~~~~~~~~~~~
 D:\Android\Text Extender\app\src\main\res\layout\dialog_create_folder.xml:13: Warning: This tag and its children can be replaced by one <TextView/> and a compound drawable [UseCompoundDrawables]
@@ -196,16 +188,25 @@ D:\Android\Text Extender\app\src\main\res\layout\dialog_create_folder.xml:13: Wa
 
    There's a lint quickfix to perform this conversion in the Eclipse plugin.
 
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1625: Warning: Set android:baselineAligned="false" on this element for better performance [DisableBaselineAlignment]
+D:\Android\Text Extender\app\src\main\res\layout\activity_add_edit_shortcut.xml:100: Warning: Set android:baselineAligned="false" on this element for better performance [DisableBaselineAlignment]
+                <LinearLayout
+                 ~~~~~~~~~~~~
+D:\Android\Text Extender\app\src\main\res\layout\activity_add_edit_shortcut.xml:175: Warning: Set android:baselineAligned="false" on this element for better performance [DisableBaselineAlignment]
+                <LinearLayout
+                 ~~~~~~~~~~~~
+D:\Android\Text Extender\app\src\main\res\layout\activity_add_edit_shortcut.xml:269: Warning: Set android:baselineAligned="false" on this element for better performance [DisableBaselineAlignment]
+            <LinearLayout
+             ~~~~~~~~~~~~
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1727: Warning: Set android:baselineAligned="false" on this element for better performance [DisableBaselineAlignment]
                             <LinearLayout
                              ~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1713: Warning: Set android:baselineAligned="false" on this element for better performance [DisableBaselineAlignment]
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1815: Warning: Set android:baselineAligned="false" on this element for better performance [DisableBaselineAlignment]
                             <LinearLayout
                              ~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1804: Warning: Set android:baselineAligned="false" on this element for better performance [DisableBaselineAlignment]
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1906: Warning: Set android:baselineAligned="false" on this element for better performance [DisableBaselineAlignment]
                             <LinearLayout
                              ~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1874: Warning: Set android:baselineAligned="false" on this element for better performance [DisableBaselineAlignment]
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1976: Warning: Set android:baselineAligned="false" on this element for better performance [DisableBaselineAlignment]
         <LinearLayout
          ~~~~~~~~~~~~
 D:\Android\Text Extender\app\src\main\res\layout\activity_onboarding.xml:118: Warning: Set android:baselineAligned="false" on this element for better performance [DisableBaselineAlignment]
@@ -221,7 +222,7 @@ D:\Android\Text Extender\app\src\main\res\layout\activity_onboarding.xml:174: Wa
    make the layout computation faster.
 
 D:\Android\Text Extender\app\src\main\res\layout\activity_add_edit_shortcut.xml:9: Warning: Possible overdraw: Root element paints background @color/background with a theme that also paints a background (inferred theme is @style/Theme.TextExpander) [Overdraw]
-    android:background="@color/background">
+    android:background="@color/background"
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:8: Warning: Possible overdraw: Root element paints background @color/background with a theme that also paints a background (inferred theme is @style/Theme.TextExpander) [Overdraw]
     android:background="@color/background">
@@ -254,20 +255,7 @@ D:\Android\Text Extender\app\src\main\res\layout\item_dialog_action.xml:10: Warn
    performance if you pre-mix the background with your drawable and use that
    resulting image or color as a custom theme background instead.
 
-D:\Android\Text Extender\app\src\main\res\layout\activity_add_edit_shortcut.xml:19: Warning: This LinearLayout layout or its FrameLayout parent is possibly unnecessary; transfer the background attribute to the other view [UselessParent]
-        <LinearLayout
-         ~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:24: Warning: This LinearLayout layout or its FrameLayout parent is possibly unnecessary; transfer the background attribute to the other view [UselessParent]
-            <LinearLayout
-             ~~~~~~~~~~~~
-
-   Explanation for issues of type "UselessParent":
-   A layout with children that has no siblings, is not a scrollview or a root
-   layout, and does not have a background, can be removed and have its
-   children moved directly into the parent for a flatter and more efficient
-   layout hierarchy.
-
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:286: Warning: activity_main.xml has more than 10 levels, bad for performance [TooDeepLayout]
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:281: Warning: activity_main.xml has more than 10 levels, bad for performance [TooDeepLayout]
                                     <TextView
                                      ~~~~~~~~
 
@@ -277,9 +265,9 @@ D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:286: Warning:
    depth is 10 but can be configured with the environment variable
    ANDROID_LINT_MAX_DEPTH.
 
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:672: Warning: activity_main.xml has more than 80 views, bad for performance [TooManyViews]
-                            <LinearLayout
-                             ~~~~~~~~~~~~
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:677: Warning: activity_main.xml has more than 80 views, bad for performance [TooManyViews]
+                                <ImageView
+                                 ~~~~~~~~~
 
    Explanation for issues of type "TooManyViews":
    Using too many views in a single layout is bad for performance. Consider
@@ -288,17 +276,6 @@ D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:672: Warning:
 
    The maximum view count defaults to 80 but can be configured with the
    environment variable ANDROID_LINT_MAX_VIEW_COUNT.
-
-D:\Android\Text Extender\app\src\main\res\values\strings.xml:10: Warning: Replace "..." with ellipsis character (…, &#8230;) ? [TypographyEllipsis]
-    <string name="expanded_text_hint">Enter your replacement text...</string>
-                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-   Explanation for issues of type "TypographyEllipsis":
-   You can replace the string "..." with a dedicated ellipsis character,
-   ellipsis character (u2026, &#8230;). This can help make the text more
-   readable.
-
-   https://en.wikipedia.org/wiki/Ellipsis
 
 D:\Android\Text Extender\app\src\main\res\drawable\ic_action_copy.png: Warning: Action Bar icons should use a single gray color (#333333 for light themes (with 60%/30% opacity for enabled/disabled), and #FFFFFF with opacity 80%/30% for dark themes [IconColors]
 D:\Android\Text Extender\app\src\main\res\drawable\ic_action_delete.png: Warning: Action Bar icons should use a single gray color (#333333 for light themes (with 60%/30% opacity for enabled/disabled), and #FFFFFF with opacity 80%/30% for dark themes [IconColors]
@@ -376,75 +353,69 @@ D:\Android\Text Extender\app\src\main\res\mipmap-xxxhdpi\ic_launcher_round.png: 
    sometimes point to icons that were accidentally overwritten or accidentally
    not updated.
 
-D:\Android\Text Extender\app\src\main\java\com\textexpander\app\MainActivity.kt:465: Warning: Use the KTX extension property View.isVisible instead? [UseKtx]
+D:\Android\Text Extender\app\src\main\java\com\textexpander\app\MainActivity.kt:508: Warning: Use the KTX extension property View.isVisible instead? [UseKtx]
             val isVisible = binding.layoutSearchBar.visibility == View.VISIBLE
                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\java\com\textexpander\app\MainActivity.kt:712: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+D:\Android\Text Extender\app\src\main\java\com\textexpander\app\MainActivity.kt:788: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
                 val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://t.me/Mehedi2R")).apply {
                                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\java\com\textexpander\app\MainActivity.kt:725: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+D:\Android\Text Extender\app\src\main\java\com\textexpander\app\MainActivity.kt:801: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
                 val intent = Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=$packageName")).apply {
                                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\java\com\textexpander\app\MainActivity.kt:731: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+D:\Android\Text Extender\app\src\main\java\com\textexpander\app\MainActivity.kt:807: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
                     val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=$packageName")).apply {
                                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\java\com\textexpander\app\MainActivity.kt:837: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+D:\Android\Text Extender\app\src\main\java\com\textexpander\app\MainActivity.kt:919: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
                     val treeUri = Uri.parse(settings.backupFolderUri)
                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\java\com\textexpander\app\MainActivity.kt:1071: Warning: Use the KTX extension function String.toColorInt instead? [UseKtx]
+D:\Android\Text Extender\app\src\main\java\com\textexpander\app\MainActivity.kt:1153: Warning: Use the KTX extension function String.toColorInt instead? [UseKtx]
                         android.graphics.Color.parseColor("#111827")
                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\java\com\textexpander\app\MainActivity.kt:1071: Warning: Use the KTX extension function String.toColorInt instead? [UseKtx]
+D:\Android\Text Extender\app\src\main\java\com\textexpander\app\MainActivity.kt:1153: Warning: Use the KTX extension function String.toColorInt instead? [UseKtx]
                         android.graphics.Color.parseColor("#111827")
                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\java\com\textexpander\app\MainActivity.kt:1079: Warning: Use the KTX extension function String.toColorInt instead? [UseKtx]
+D:\Android\Text Extender\app\src\main\java\com\textexpander\app\MainActivity.kt:1161: Warning: Use the KTX extension function String.toColorInt instead? [UseKtx]
                     titleView.setTextColor(android.graphics.Color.parseColor("#111827"))
                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\java\com\textexpander\app\MainActivity.kt:1163: Warning: Use the KTX extension function String.toColorInt instead? [UseKtx]
+D:\Android\Text Extender\app\src\main\java\com\textexpander\app\MainActivity.kt:1245: Warning: Use the KTX extension function String.toColorInt instead? [UseKtx]
                         android.graphics.Color.parseColor("#111827")
                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\java\com\textexpander\app\MainActivity.kt:1163: Warning: Use the KTX extension function String.toColorInt instead? [UseKtx]
+D:\Android\Text Extender\app\src\main\java\com\textexpander\app\MainActivity.kt:1245: Warning: Use the KTX extension function String.toColorInt instead? [UseKtx]
                         android.graphics.Color.parseColor("#111827")
                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\java\com\textexpander\app\MainActivity.kt:1167: Warning: Use the KTX extension function String.toColorInt instead? [UseKtx]
+D:\Android\Text Extender\app\src\main\java\com\textexpander\app\MainActivity.kt:1249: Warning: Use the KTX extension function String.toColorInt instead? [UseKtx]
                 titleView.setTextColor(android.graphics.Color.parseColor("#111827"))
                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\java\com\textexpander\app\MainActivity.kt:1298: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+D:\Android\Text Extender\app\src\main\java\com\textexpander\app\MainActivity.kt:1372: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
                     data = Uri.parse("package:$packageName")
                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\java\com\textexpander\app\MainActivity.kt:1298: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+D:\Android\Text Extender\app\src\main\java\com\textexpander\app\MainActivity.kt:1372: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
                     data = Uri.parse("package:$packageName")
                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\java\com\textexpander\app\MainActivity.kt:1312: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+D:\Android\Text Extender\app\src\main\java\com\textexpander\app\MainActivity.kt:1386: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
                         data = Uri.parse("package:$packageName")
                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\java\com\textexpander\app\MainActivity.kt:1312: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+D:\Android\Text Extender\app\src\main\java\com\textexpander\app\MainActivity.kt:1386: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
                         data = Uri.parse("package:$packageName")
                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\java\com\textexpander\app\OnboardingActivity.kt:51: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
-                prefs.edit().putBoolean("is_onboarding_completed", true).apply()
-                ~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\java\com\textexpander\app\OnboardingActivity.kt:69: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+D:\Android\Text Extender\app\src\main\java\com\textexpander\app\OnboardingActivity.kt:67: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
                         data = Uri.parse("package:$packageName")
                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\java\com\textexpander\app\OnboardingActivity.kt:69: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+D:\Android\Text Extender\app\src\main\java\com\textexpander\app\OnboardingActivity.kt:67: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
                         data = Uri.parse("package:$packageName")
                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\java\com\textexpander\app\OnboardingActivity.kt:83: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+D:\Android\Text Extender\app\src\main\java\com\textexpander\app\OnboardingActivity.kt:81: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
                             data = Uri.parse("package:$packageName")
                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\java\com\textexpander\app\OnboardingActivity.kt:83: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+D:\Android\Text Extender\app\src\main\java\com\textexpander\app\OnboardingActivity.kt:81: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
                             data = Uri.parse("package:$packageName")
                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\java\com\textexpander\app\OnboardingActivity.kt:113: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+D:\Android\Text Extender\app\src\main\java\com\textexpander\app\OnboardingActivity.kt:115: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
                     data = Uri.parse("package:$packageName")
                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\java\com\textexpander\app\OnboardingActivity.kt:113: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+D:\Android\Text Extender\app\src\main\java\com\textexpander\app\OnboardingActivity.kt:115: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
                     data = Uri.parse("package:$packageName")
                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\java\com\textexpander\app\OnboardingActivity.kt:122: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
-            prefs.edit().putBoolean("is_onboarding_completed", true).apply()
-            ~~~~~~~~~~~~
 D:\Android\Text Extender\app\src\main\java\com\textexpander\app\data\SettingsPreferences.kt:14: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
         set(value) = prefs.edit().putBoolean(KEY_ENABLE_DETECTION, value).apply()
                      ~~~~~~~~~~~~
@@ -460,41 +431,56 @@ D:\Android\Text Extender\app\src\main\java\com\textexpander\app\data\SettingsPre
 D:\Android\Text Extender\app\src\main\java\com\textexpander\app\data\SettingsPreferences.kt:30: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
         set(value) = prefs.edit().putBoolean(KEY_MATCH_FROM_BEGINNING, value).apply()
                      ~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\java\com\textexpander\app\data\SettingsPreferences.kt:35: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+D:\Android\Text Extender\app\src\main\java\com\textexpander\app\data\SettingsPreferences.kt:34: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+        set(value) = prefs.edit().putBoolean(KEY_ENABLE_FOREGROUND_SERVICE, value).apply()
+                     ~~~~~~~~~~~~
+D:\Android\Text Extender\app\src\main\java\com\textexpander\app\data\SettingsPreferences.kt:39: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
         set(value) = prefs.edit().putBoolean(KEY_ENABLE_SUGGESTION_OVERLAY, value).apply()
                      ~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\java\com\textexpander\app\data\SettingsPreferences.kt:40: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+D:\Android\Text Extender\app\src\main\java\com\textexpander\app\data\SettingsPreferences.kt:44: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
         set(value) = prefs.edit().putBoolean(KEY_ENABLE_CLIPBOARD, value).apply()
                      ~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\java\com\textexpander\app\data\SettingsPreferences.kt:45: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+D:\Android\Text Extender\app\src\main\java\com\textexpander\app\data\SettingsPreferences.kt:49: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
         set(value) = prefs.edit().putBoolean(KEY_ENABLE_STATISTICS, value).apply()
                      ~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\java\com\textexpander\app\data\SettingsPreferences.kt:49: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+D:\Android\Text Extender\app\src\main\java\com\textexpander\app\data\SettingsPreferences.kt:53: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
         set(value) = prefs.edit().putBoolean(KEY_SHARE_STATISTICS, value).apply()
                      ~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\java\com\textexpander\app\data\SettingsPreferences.kt:53: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+D:\Android\Text Extender\app\src\main\java\com\textexpander\app\data\SettingsPreferences.kt:57: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
         set(value) = prefs.edit().putLong(KEY_SAVED_KEYSTROKES, value).apply()
                      ~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\java\com\textexpander\app\data\SettingsPreferences.kt:58: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+D:\Android\Text Extender\app\src\main\java\com\textexpander\app\data\SettingsPreferences.kt:61: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+        set(value) = prefs.edit().putLong(KEY_HARDWARE_KEYSTROKES, value).apply()
+                     ~~~~~~~~~~~~
+D:\Android\Text Extender\app\src\main\java\com\textexpander\app\data\SettingsPreferences.kt:66: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
         set(value) = prefs.edit().putBoolean(KEY_SHOW_CLIPBOARD_ACCESS, value).apply()
                      ~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\java\com\textexpander\app\data\SettingsPreferences.kt:62: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+D:\Android\Text Extender\app\src\main\java\com\textexpander\app\data\SettingsPreferences.kt:70: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
         set(value) = prefs.edit().putBoolean(KEY_ENABLE_HAPTIC_FEEDBACK, value).apply()
                      ~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\java\com\textexpander\app\data\SettingsPreferences.kt:115: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+D:\Android\Text Extender\app\src\main\java\com\textexpander\app\data\SettingsPreferences.kt:123: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
         prefs.edit().putString(KEY_CUSTOM_FOLDERS, array.toString()).apply()
         ~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\java\com\textexpander\app\data\SettingsPreferences.kt:120: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+D:\Android\Text Extender\app\src\main\java\com\textexpander\app\data\SettingsPreferences.kt:128: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
         set(value) = prefs.edit().putString(KEY_BACKUP_FOLDER_URI, value).apply()
                      ~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\java\com\textexpander\app\data\SettingsPreferences.kt:127: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+D:\Android\Text Extender\app\src\main\java\com\textexpander\app\data\SettingsPreferences.kt:135: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
         set(value) = prefs.edit().putString(KEY_BACKUP_FOLDER_PATH, value).apply()
                      ~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\java\com\textexpander\app\data\SettingsPreferences.kt:131: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+D:\Android\Text Extender\app\src\main\java\com\textexpander\app\data\SettingsPreferences.kt:139: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
         set(value) = prefs.edit().putLong(KEY_LAST_BACKUP_TIMESTAMP, value).apply()
                      ~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\java\com\textexpander\app\data\SettingsPreferences.kt:137: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+D:\Android\Text Extender\app\src\main\java\com\textexpander\app\data\SettingsPreferences.kt:145: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
         prefs.edit().putLong(KEY_SAVED_KEYSTROKES, updated).apply()
+        ~~~~~~~~~~~~
+D:\Android\Text Extender\app\src\main\java\com\textexpander\app\data\SettingsPreferences.kt:152: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+        prefs.edit().putLong(KEY_HARDWARE_KEYSTROKES, updated).apply()
+        ~~~~~~~~~~~~
+D:\Android\Text Extender\app\src\main\java\com\textexpander\app\data\SettingsPreferences.kt:157: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+        prefs.edit().putLong(KEY_HARDWARE_KEYSTROKES, 0L).apply()
+        ~~~~~~~~~~~~
+D:\Android\Text Extender\app\src\main\java\com\textexpander\app\data\SettingsPreferences.kt:161: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+        prefs.edit().putLong(KEY_HARDWARE_KEYSTROKES, 0L).apply()
         ~~~~~~~~~~~~
 
    Explanation for issues of type "UseKtx":
@@ -553,10 +539,10 @@ D:\Android\Text Extender\app\src\main\java\com\textexpander\app\data\SettingsPre
    </lint>
    ```
 
-D:\Android\Text Extender\app\src\main\java\com\textexpander\app\service\TextExpanderAccessibilityService.kt:664: Warning: onTouch lambda should call View#performClick when a click is detected [ClickableViewAccessibility]
+D:\Android\Text Extender\app\src\main\java\com\textexpander\app\service\TextExpanderAccessibilityService.kt:889: Warning: onTouch lambda should call View#performClick when a click is detected [ClickableViewAccessibility]
             scrollSuggestionText?.setOnTouchListener { v, event ->
                                                      ^
-D:\Android\Text Extender\app\src\main\java\com\textexpander\app\service\TextExpanderAccessibilityService.kt:713: Warning: onTouch lambda should call View#performClick when a click is detected [ClickableViewAccessibility]
+D:\Android\Text Extender\app\src\main\java\com\textexpander\app\service\TextExpanderAccessibilityService.kt:926: Warning: onTouch lambda should call View#performClick when a click is detected [ClickableViewAccessibility]
             view.setOnTouchListener { _, touchEvent ->
                                     ^
 
@@ -567,121 +553,130 @@ D:\Android\Text Extender\app\src\main\java\com\textexpander\app\service\TextExpa
    actions should ideally be placed in View#performClick as some accessibility
    services invoke performClick when a click action should occur.
 
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:91: Warning: Missing contentDescription attribute on image [ContentDescription]
+D:\Android\Text Extender\app\src\main\res\layout\activity_add_edit_shortcut.xml:218: Warning: Missing contentDescription attribute on image [ContentDescription]
+                        <ImageView
+                         ~~~~~~~~~
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:85: Warning: Missing contentDescription attribute on image [ContentDescription]
+                <ImageView
+                 ~~~~~~~~~
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:414: Warning: Missing contentDescription attribute on image [ContentDescription]
+                            <ImageView
+                             ~~~~~~~~~
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:430: Warning: Missing contentDescription attribute on image [ContentDescription]
+                            <ImageView
+                             ~~~~~~~~~
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:457: Warning: Missing contentDescription attribute on image [ContentDescription]
+                                <ImageView
+                                 ~~~~~~~~~
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:512: Warning: Missing contentDescription attribute on image [ContentDescription]
+                                <ImageView
+                                 ~~~~~~~~~
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:567: Warning: Missing contentDescription attribute on image [ContentDescription]
+                                <ImageView
+                                 ~~~~~~~~~
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:622: Warning: Missing contentDescription attribute on image [ContentDescription]
+                                <ImageView
+                                 ~~~~~~~~~
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:677: Warning: Missing contentDescription attribute on image [ContentDescription]
+                                <ImageView
+                                 ~~~~~~~~~
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:732: Warning: Missing contentDescription attribute on image [ContentDescription]
+                                <ImageView
+                                 ~~~~~~~~~
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:793: Warning: Missing contentDescription attribute on image [ContentDescription]
+                            <ImageView
+                             ~~~~~~~~~
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:809: Warning: Missing contentDescription attribute on image [ContentDescription]
+                            <ImageView
+                             ~~~~~~~~~
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:836: Warning: Missing contentDescription attribute on image [ContentDescription]
+                                <ImageView
+                                 ~~~~~~~~~
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:897: Warning: Missing contentDescription attribute on image [ContentDescription]
+                            <ImageView
+                             ~~~~~~~~~
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:913: Warning: Missing contentDescription attribute on image [ContentDescription]
+                            <ImageView
+                             ~~~~~~~~~
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:940: Warning: Missing contentDescription attribute on image [ContentDescription]
+                                <ImageView
+                                 ~~~~~~~~~
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1001: Warning: Missing contentDescription attribute on image [ContentDescription]
+                            <ImageView
+                             ~~~~~~~~~
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1017: Warning: Missing contentDescription attribute on image [ContentDescription]
+                            <ImageView
+                             ~~~~~~~~~
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1048: Warning: Missing contentDescription attribute on image [ContentDescription]
+                                <ImageView
+                                 ~~~~~~~~~
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1097: Warning: Missing contentDescription attribute on image [ContentDescription]
+                                <ImageView
+                                 ~~~~~~~~~
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1151: Warning: Missing contentDescription attribute on image [ContentDescription]
+                                <ImageView
+                                 ~~~~~~~~~
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1203: Warning: Missing contentDescription attribute on image [ContentDescription]
+                                <ImageView
+                                 ~~~~~~~~~
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1263: Warning: Missing contentDescription attribute on image [ContentDescription]
+                            <ImageView
+                             ~~~~~~~~~
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1279: Warning: Missing contentDescription attribute on image [ContentDescription]
+                            <ImageView
+                             ~~~~~~~~~
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1306: Warning: Missing contentDescription attribute on image [ContentDescription]
+                                <ImageView
+                                 ~~~~~~~~~
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1361: Warning: Missing contentDescription attribute on image [ContentDescription]
+                                <ImageView
+                                 ~~~~~~~~~
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1420: Warning: Missing contentDescription attribute on image [ContentDescription]
+                                <ImageView
+                                 ~~~~~~~~~
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1474: Warning: Missing contentDescription attribute on image [ContentDescription]
+                            <ImageView
+                             ~~~~~~~~~
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1490: Warning: Missing contentDescription attribute on image [ContentDescription]
+                            <ImageView
+                             ~~~~~~~~~
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1517: Warning: Missing contentDescription attribute on image [ContentDescription]
+                                <ImageView
+                                 ~~~~~~~~~
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1572: Warning: Missing contentDescription attribute on image [ContentDescription]
+                                <ImageView
+                                 ~~~~~~~~~
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1633: Warning: Missing contentDescription attribute on image [ContentDescription]
+                            <ImageView
+                             ~~~~~~~~~
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1649: Warning: Missing contentDescription attribute on image [ContentDescription]
+                            <ImageView
+                             ~~~~~~~~~
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1744: Warning: Missing contentDescription attribute on image [ContentDescription]
+                                    <ImageView
+                                     ~~~~~~~~~
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1784: Warning: Missing contentDescription attribute on image [ContentDescription]
+                                    <ImageView
+                                     ~~~~~~~~~
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1835: Warning: Missing contentDescription attribute on image [ContentDescription]
+                                    <ImageView
+                                     ~~~~~~~~~
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1875: Warning: Missing contentDescription attribute on image [ContentDescription]
+                                    <ImageView
+                                     ~~~~~~~~~
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1923: Warning: Missing contentDescription attribute on image [ContentDescription]
+                                    <ImageView
+                                     ~~~~~~~~~
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1951: Warning: Missing contentDescription attribute on image [ContentDescription]
+                                    <ImageView
+                                     ~~~~~~~~~
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:2002: Warning: Missing contentDescription attribute on image [ContentDescription]
                     <ImageView
                      ~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:419: Warning: Missing contentDescription attribute on image [ContentDescription]
-                            <ImageView
-                             ~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:435: Warning: Missing contentDescription attribute on image [ContentDescription]
-                            <ImageView
-                             ~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:462: Warning: Missing contentDescription attribute on image [ContentDescription]
-                                <ImageView
-                                 ~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:517: Warning: Missing contentDescription attribute on image [ContentDescription]
-                                <ImageView
-                                 ~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:572: Warning: Missing contentDescription attribute on image [ContentDescription]
-                                <ImageView
-                                 ~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:627: Warning: Missing contentDescription attribute on image [ContentDescription]
-                                <ImageView
-                                 ~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:682: Warning: Missing contentDescription attribute on image [ContentDescription]
-                                <ImageView
-                                 ~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:743: Warning: Missing contentDescription attribute on image [ContentDescription]
-                            <ImageView
-                             ~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:759: Warning: Missing contentDescription attribute on image [ContentDescription]
-                            <ImageView
-                             ~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:786: Warning: Missing contentDescription attribute on image [ContentDescription]
-                                <ImageView
-                                 ~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:847: Warning: Missing contentDescription attribute on image [ContentDescription]
-                            <ImageView
-                             ~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:863: Warning: Missing contentDescription attribute on image [ContentDescription]
-                            <ImageView
-                             ~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:890: Warning: Missing contentDescription attribute on image [ContentDescription]
-                                <ImageView
-                                 ~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:951: Warning: Missing contentDescription attribute on image [ContentDescription]
-                            <ImageView
-                             ~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:967: Warning: Missing contentDescription attribute on image [ContentDescription]
-                            <ImageView
-                             ~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:998: Warning: Missing contentDescription attribute on image [ContentDescription]
-                                <ImageView
-                                 ~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1047: Warning: Missing contentDescription attribute on image [ContentDescription]
-                                <ImageView
-                                 ~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1101: Warning: Missing contentDescription attribute on image [ContentDescription]
-                                <ImageView
-                                 ~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1153: Warning: Missing contentDescription attribute on image [ContentDescription]
-                                <ImageView
-                                 ~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1213: Warning: Missing contentDescription attribute on image [ContentDescription]
-                            <ImageView
-                             ~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1229: Warning: Missing contentDescription attribute on image [ContentDescription]
-                            <ImageView
-                             ~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1256: Warning: Missing contentDescription attribute on image [ContentDescription]
-                                <ImageView
-                                 ~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1311: Warning: Missing contentDescription attribute on image [ContentDescription]
-                                <ImageView
-                                 ~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1372: Warning: Missing contentDescription attribute on image [ContentDescription]
-                            <ImageView
-                             ~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1388: Warning: Missing contentDescription attribute on image [ContentDescription]
-                            <ImageView
-                             ~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1415: Warning: Missing contentDescription attribute on image [ContentDescription]
-                                <ImageView
-                                 ~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1470: Warning: Missing contentDescription attribute on image [ContentDescription]
-                                <ImageView
-                                 ~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1531: Warning: Missing contentDescription attribute on image [ContentDescription]
-                            <ImageView
-                             ~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1547: Warning: Missing contentDescription attribute on image [ContentDescription]
-                            <ImageView
-                             ~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1642: Warning: Missing contentDescription attribute on image [ContentDescription]
-                                    <ImageView
-                                     ~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1682: Warning: Missing contentDescription attribute on image [ContentDescription]
-                                    <ImageView
-                                     ~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1733: Warning: Missing contentDescription attribute on image [ContentDescription]
-                                    <ImageView
-                                     ~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1773: Warning: Missing contentDescription attribute on image [ContentDescription]
-                                    <ImageView
-                                     ~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1821: Warning: Missing contentDescription attribute on image [ContentDescription]
-                                    <ImageView
-                                     ~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1849: Warning: Missing contentDescription attribute on image [ContentDescription]
-                                    <ImageView
-                                     ~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1900: Warning: Missing contentDescription attribute on image [ContentDescription]
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:2039: Warning: Missing contentDescription attribute on image [ContentDescription]
                     <ImageView
                      ~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1937: Warning: Missing contentDescription attribute on image [ContentDescription]
-                    <ImageView
-                     ~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1973: Warning: Missing contentDescription attribute on image [ContentDescription]
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:2075: Warning: Missing contentDescription attribute on image [ContentDescription]
                     <ImageView
                      ~~~~~~~~~
 D:\Android\Text Extender\app\src\main\res\layout\activity_onboarding.xml:288: Warning: Missing contentDescription attribute on image [ContentDescription]
@@ -693,9 +688,6 @@ D:\Android\Text Extender\app\src\main\res\layout\item_folder_category.xml:19: Wa
 D:\Android\Text Extender\app\src\main\res\layout\item_folder_category.xml:43: Warning: Missing contentDescription attribute on image [ContentDescription]
     <ImageView
      ~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\layout_floating_suggestion.xml:53: Warning: Missing contentDescription attribute on image [ContentDescription]
-            <ImageView
-             ~~~~~~~~~
 
    Explanation for issues of type "ContentDescription":
    Non-textual widgets like ImageViews and ImageButtons should use the
@@ -716,52 +708,58 @@ D:\Android\Text Extender\app\src\main\res\layout\layout_floating_suggestion.xml:
 
    https://developer.android.com/guide/topics/ui/accessibility/apps#special-cases
 
+D:\Android\Text Extender\app\src\main\java\com\textexpander\app\AddEditShortcutActivity.kt:56: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        binding.tvFolderBadge.text = "📁 $displayFolder"
+                                     ~~~~~~~~~~~~~~~~~~~
+D:\Android\Text Extender\app\src\main\java\com\textexpander\app\AddEditShortcutActivity.kt:139: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+                        binding.tvFolderBadge.text = "📁 ${entity.folderName}"
+                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~
 D:\Android\Text Extender\app\src\main\java\com\textexpander\app\ui\ClipboardAdapter.kt:47: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
             binding.tvClipboardCount.text = "1x"
                                              ~~
-D:\Android\Text Extender\app\src\main\java\com\textexpander\app\MainActivity.kt:358: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+D:\Android\Text Extender\app\src\main\java\com\textexpander\app\MainActivity.kt:382: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
             binding.tvHeaderTitle.text = "Search Results"
                                           ~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\java\com\textexpander\app\MainActivity.kt:359: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+D:\Android\Text Extender\app\src\main\java\com\textexpander\app\MainActivity.kt:383: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
             binding.tvHeaderSubtitle.text = "${allRawShortcuts.size} results"
                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\java\com\textexpander\app\MainActivity.kt:359: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+D:\Android\Text Extender\app\src\main\java\com\textexpander\app\MainActivity.kt:383: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
             binding.tvHeaderSubtitle.text = "${allRawShortcuts.size} results"
                                                                     ~~~~~~~~
-D:\Android\Text Extender\app\src\main\java\com\textexpander\app\MainActivity.kt:393: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+D:\Android\Text Extender\app\src\main\java\com\textexpander\app\MainActivity.kt:417: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
             binding.tvHeaderSubtitle.text = "$folderStr · $snippetStr"
                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\java\com\textexpander\app\MainActivity.kt:444: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+D:\Android\Text Extender\app\src\main\java\com\textexpander\app\MainActivity.kt:478: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
                 binding.tvHeaderTitle.text = "Clipboard"
                                               ~~~~~~~~~
-D:\Android\Text Extender\app\src\main\java\com\textexpander\app\MainActivity.kt:445: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+D:\Android\Text Extender\app\src\main\java\com\textexpander\app\MainActivity.kt:479: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
                 binding.tvHeaderSubtitle.text = "$clipboardCount copied text" + (if (clipboardCount == 1) "" else "s")
                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\java\com\textexpander\app\MainActivity.kt:445: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+D:\Android\Text Extender\app\src\main\java\com\textexpander\app\MainActivity.kt:479: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
                 binding.tvHeaderSubtitle.text = "$clipboardCount copied text" + (if (clipboardCount == 1) "" else "s")
                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\java\com\textexpander\app\MainActivity.kt:445: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+D:\Android\Text Extender\app\src\main\java\com\textexpander\app\MainActivity.kt:479: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
                 binding.tvHeaderSubtitle.text = "$clipboardCount copied text" + (if (clipboardCount == 1) "" else "s")
                                                                 ~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\java\com\textexpander\app\MainActivity.kt:582: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+D:\Android\Text Extender\app\src\main\java\com\textexpander\app\MainActivity.kt:625: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
         binding.tvBackupFolderPath.text = "(${settings.backupFolderPath})"
                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\java\com\textexpander\app\MainActivity.kt:590: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+D:\Android\Text Extender\app\src\main\java\com\textexpander\app\MainActivity.kt:633: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
         binding.tvBackupInfoDetails.text = "Last backup: $lastBackupStr"
                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\java\com\textexpander\app\MainActivity.kt:590: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+D:\Android\Text Extender\app\src\main\java\com\textexpander\app\MainActivity.kt:633: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
         binding.tvBackupInfoDetails.text = "Last backup: $lastBackupStr"
                                             ~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\java\com\textexpander\app\MainActivity.kt:708: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+D:\Android\Text Extender\app\src\main\java\com\textexpander\app\MainActivity.kt:784: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
         binding.tvAboutVersion.text = "v${BuildConfig.VERSION_NAME} • Stable"
                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\java\com\textexpander\app\MainActivity.kt:708: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+D:\Android\Text Extender\app\src\main\java\com\textexpander\app\MainActivity.kt:784: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
         binding.tvAboutVersion.text = "v${BuildConfig.VERSION_NAME} • Stable"
                                                                    ~~~~~~~~~
-D:\Android\Text Extender\app\src\main\java\com\textexpander\app\OnboardingActivity.kt:136: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+D:\Android\Text Extender\app\src\main\java\com\textexpander\app\OnboardingActivity.kt:155: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
             binding.tvSubtitleBg.text = "Active • Service won't be stopped in background"
                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\java\com\textexpander\app\OnboardingActivity.kt:144: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+D:\Android\Text Extender\app\src\main\java\com\textexpander\app\OnboardingActivity.kt:163: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
             binding.tvSubtitleAcc.text = "Active • Ready to expand keywords everywhere"
                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -778,226 +776,262 @@ D:\Android\Text Extender\app\src\main\java\com\textexpander\app\OnboardingActivi
 
    https://developer.android.com/guide/topics/resources/localization.html
 
-D:\Android\Text Extender\app\src\main\res\layout\activity_add_edit_shortcut.xml:34: Warning: Hardcoded string "Back", should use @string resource [HardcodedText]
+D:\Android\Text Extender\app\src\main\res\layout\activity_add_edit_shortcut.xml:36: Warning: Hardcoded string "Back", should use @string resource [HardcodedText]
                 android:contentDescription="Back"
                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_add_edit_shortcut.xml:146: Warning: Hardcoded string "0 characters • Limitless", should use @string resource [HardcodedText]
-                    android:text="0 characters • Limitless"
-                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:39: Warning: Hardcoded string "Back", should use @string resource [HardcodedText]
-                    android:contentDescription="Back"
-                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:51: Warning: Hardcoded string "Header Icon", should use @string resource [HardcodedText]
-                    android:contentDescription="Header Icon" />
-                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:64: Warning: Hardcoded string "/", should use @string resource [HardcodedText]
-                        android:text="/"
-                        ~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:74: Warning: Hardcoded string "0 folders · 0 text snippets", should use @string resource [HardcodedText]
-                        android:text="0 folders · 0 text snippets"
-                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:102: Warning: Hardcoded string "0 saved", should use @string resource [HardcodedText]
-                        android:text="0 saved"
-                        ~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:115: Warning: Hardcoded string "Info", should use @string resource [HardcodedText]
-                    android:contentDescription="Info"
-                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:147: Warning: Hardcoded string "Search...", should use @string resource [HardcodedText]
+D:\Android\Text Extender\app\src\main\res\layout\activity_add_edit_shortcut.xml:58: Warning: Hardcoded string "📁 Root", should use @string resource [HardcodedText]
+            android:text="📁 Root"
+            ~~~~~~~~~~~~~~~~~~~~~~
+D:\Android\Text Extender\app\src\main\res\layout\activity_add_edit_shortcut.xml:93: Warning: Hardcoded string "TRIGGER KEY", should use @string resource [HardcodedText]
+                    android:text="TRIGGER KEY"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\Android\Text Extender\app\src\main\res\layout\activity_add_edit_shortcut.xml:118: Warning: Hardcoded string "⌘ KEY", should use @string resource [HardcodedText]
+                            android:text="⌘ KEY"
+                            ~~~~~~~~~~~~~~~~~~~~
+D:\Android\Text Extender\app\src\main\res\layout\activity_add_edit_shortcut.xml:146: Warning: Hardcoded string ";keyword", should use @string resource [HardcodedText]
+                            android:hint=";keyword"
+                            ~~~~~~~~~~~~~~~~~~~~~~~
+D:\Android\Text Extender\app\src\main\res\layout\activity_add_edit_shortcut.xml:160: Warning: Hardcoded string "Expands when Space is pressed", should use @string resource [HardcodedText]
+                    android:text="Expands when Space is pressed"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\Android\Text Extender\app\src\main\res\layout\activity_add_edit_shortcut.xml:191: Warning: Hardcoded string "EXPANSION TEXT", should use @string resource [HardcodedText]
+                            android:text="EXPANSION TEXT"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\Android\Text Extender\app\src\main\res\layout\activity_add_edit_shortcut.xml:202: Warning: Hardcoded string "0 characters • Limitless", should use @string resource [HardcodedText]
+                            android:text="0 characters • Limitless"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\Android\Text Extender\app\src\main\res\layout\activity_add_edit_shortcut.xml:255: Warning: Hardcoded string "Type your expansion snippet...", should use @string resource [HardcodedText]
+                        android:hint="Type your expansion snippet..."
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\Android\Text Extender\app\src\main\res\layout\activity_add_edit_shortcut.xml:312: Warning: Hardcoded string "Save Shortcut", should use @string resource [HardcodedText]
+                        android:text="Save Shortcut"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:33: Warning: Hardcoded string "Back", should use @string resource [HardcodedText]
+                android:contentDescription="Back"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:46: Warning: Hardcoded string "Header Icon", should use @string resource [HardcodedText]
+                android:contentDescription="Header Icon" />
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:59: Warning: Hardcoded string "/", should use @string resource [HardcodedText]
+                    android:text="/"
+                    ~~~~~~~~~~~~~~~~
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:69: Warning: Hardcoded string "0 folders · 0 text snippets", should use @string resource [HardcodedText]
+                    android:text="0 folders · 0 text snippets"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:96: Warning: Hardcoded string "0 keystrokes", should use @string resource [HardcodedText]
+                    android:text="0 keystrokes"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:109: Warning: Hardcoded string "Info", should use @string resource [HardcodedText]
+                android:contentDescription="Info"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:140: Warning: Hardcoded string "Search...", should use @string resource [HardcodedText]
                     android:hint="Search..."
                     ~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:201: Warning: Hardcoded string "Empty", should use @string resource [HardcodedText]
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:195: Warning: Hardcoded string "Empty", should use @string resource [HardcodedText]
                         android:contentDescription="Empty"
                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:208: Warning: Hardcoded string "Tap + to create text snippet", should use @string resource [HardcodedText]
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:202: Warning: Hardcoded string "Tap + to create text snippet", should use @string resource [HardcodedText]
                         android:text="Tap + to create text snippet"
                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:276: Warning: Hardcoded string "Status", should use @string resource [HardcodedText]
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:271: Warning: Hardcoded string "Status", should use @string resource [HardcodedText]
                                     android:contentDescription="Status"
                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:290: Warning: Hardcoded string "Enable Accessibility Service", should use @string resource [HardcodedText]
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:285: Warning: Hardcoded string "Enable Accessibility Service", should use @string resource [HardcodedText]
                                         android:text="Enable Accessibility Service"
                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:300: Warning: Hardcoded string "Required to detect shortcut keys in other apps", should use @string resource [HardcodedText]
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:295: Warning: Hardcoded string "Required to detect shortcut keys in other apps", should use @string resource [HardcodedText]
                                         android:text="Required to detect shortcut keys in other apps"
                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:316: Warning: Hardcoded string "Enable in Settings", should use @string resource [HardcodedText]
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:311: Warning: Hardcoded string "Enable in Settings", should use @string resource [HardcodedText]
                                     android:text="Enable in Settings"
                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:325: Warning: Hardcoded string "Fix 'Restricted'", should use @string resource [HardcodedText]
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:320: Warning: Hardcoded string "Fix 'Restricted'", should use @string resource [HardcodedText]
                                     android:text="Fix 'Restricted'"
                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:360: Warning: Hardcoded string "Background", should use @string resource [HardcodedText]
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:355: Warning: Hardcoded string "Background", should use @string resource [HardcodedText]
                                     android:contentDescription="Background"
                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:373: Warning: Hardcoded string "Allow Run in Background", should use @string resource [HardcodedText]
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:368: Warning: Hardcoded string "Allow Run in Background", should use @string resource [HardcodedText]
                                         android:text="Allow Run in Background"
                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:382: Warning: Hardcoded string "Prevents Android from stopping the app during typing", should use @string resource [HardcodedText]
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:377: Warning: Hardcoded string "Prevents Android from stopping the app during typing", should use @string resource [HardcodedText]
                                         android:text="Prevents Android from stopping the app during typing"
                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:393: Warning: Hardcoded string "Allow Background Running", should use @string resource [HardcodedText]
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:388: Warning: Hardcoded string "Allow Background Running", should use @string resource [HardcodedText]
                                 android:text="Allow Background Running"
                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:430: Warning: Hardcoded string "Detection", should use @string resource [HardcodedText]
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:425: Warning: Hardcoded string "Detection", should use @string resource [HardcodedText]
                                 android:text="Detection"
                                 ~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:479: Warning: Hardcoded string "Enable detection", should use @string resource [HardcodedText]
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:474: Warning: Hardcoded string "Enable detection", should use @string resource [HardcodedText]
                                         android:text="Enable detection"
                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:488: Warning: Hardcoded string "Detect and replace keywords as you type across all features", should use @string resource [HardcodedText]
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:483: Warning: Hardcoded string "Detect and replace keywords as you type across all features", should use @string resource [HardcodedText]
                                         android:text="Detect and replace keywords as you type across all features"
                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:534: Warning: Hardcoded string "Use optimized detection", should use @string resource [HardcodedText]
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:529: Warning: Hardcoded string "Use optimized detection", should use @string resource [HardcodedText]
                                         android:text="Use optimized detection"
                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:543: Warning: Hardcoded string "Enable faster, more efficient keyword detection and replacement", should use @string resource [HardcodedText]
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:538: Warning: Hardcoded string "Enable faster, more efficient keyword detection and replacement", should use @string resource [HardcodedText]
                                         android:text="Enable faster, more efficient keyword detection and replacement"
                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:589: Warning: Hardcoded string "Detect in all apps", should use @string resource [HardcodedText]
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:584: Warning: Hardcoded string "Detect in all apps", should use @string resource [HardcodedText]
                                         android:text="Detect in all apps"
                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:598: Warning: Hardcoded string "Detect keywords in apps that may not work correctly", should use @string resource [HardcodedText]
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:593: Warning: Hardcoded string "Detect keywords in apps that may not work correctly", should use @string resource [HardcodedText]
                                         android:text="Detect keywords in apps that may not work correctly"
                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:644: Warning: Hardcoded string "Detect in all languages", should use @string resource [HardcodedText]
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:639: Warning: Hardcoded string "Detect in all languages", should use @string resource [HardcodedText]
                                         android:text="Detect in all languages"
                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:653: Warning: Hardcoded string "Detect keywords when typing in languages other than English", should use @string resource [HardcodedText]
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:648: Warning: Hardcoded string "Detect keywords when typing in languages other than English", should use @string resource [HardcodedText]
                                         android:text="Detect keywords when typing in languages other than English"
                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:699: Warning: Hardcoded string "Match from beginning", should use @string resource [HardcodedText]
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:694: Warning: Hardcoded string "Match from beginning", should use @string resource [HardcodedText]
                                         android:text="Match from beginning"
                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:708: Warning: Hardcoded string "Only match keywords that begin with the typed text", should use @string resource [HardcodedText]
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:703: Warning: Hardcoded string "Only match keywords that begin with the typed text", should use @string resource [HardcodedText]
                                         android:text="Only match keywords that begin with the typed text"
                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:754: Warning: Hardcoded string "Suggestion", should use @string resource [HardcodedText]
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:749: Warning: Hardcoded string "Keep-alive background service", should use @string resource [HardcodedText]
+                                        android:text="Keep-alive background service"
+                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:758: Warning: Hardcoded string "Run a persistent service to prevent the OS from killing shortcut detection", should use @string resource [HardcodedText]
+                                        android:text="Run a persistent service to prevent the OS from killing shortcut detection"
+                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:804: Warning: Hardcoded string "Suggestion", should use @string resource [HardcodedText]
                                 android:text="Suggestion"
                                 ~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:803: Warning: Hardcoded string "Enable suggestion overlay", should use @string resource [HardcodedText]
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:853: Warning: Hardcoded string "Enable suggestion overlay", should use @string resource [HardcodedText]
                                         android:text="Enable suggestion overlay"
                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:812: Warning: Hardcoded string "Show matching entries as you type", should use @string resource [HardcodedText]
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:862: Warning: Hardcoded string "Show matching entries as you type", should use @string resource [HardcodedText]
                                         android:text="Show matching entries as you type"
                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:858: Warning: Hardcoded string "Clipboard", should use @string resource [HardcodedText]
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:908: Warning: Hardcoded string "Clipboard", should use @string resource [HardcodedText]
                                 android:text="Clipboard"
                                 ~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:907: Warning: Hardcoded string "Enable clipboard", should use @string resource [HardcodedText]
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:957: Warning: Hardcoded string "Enable clipboard", should use @string resource [HardcodedText]
                                         android:text="Enable clipboard"
                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:916: Warning: Hardcoded string "Record copied text for future use", should use @string resource [HardcodedText]
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:966: Warning: Hardcoded string "Record copied text for future use", should use @string resource [HardcodedText]
                                         android:text="Record copied text for future use"
                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:962: Warning: Hardcoded string "Backup Data", should use @string resource [HardcodedText]
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1012: Warning: Hardcoded string "Backup Data", should use @string resource [HardcodedText]
                                 android:text="Backup Data"
                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1014: Warning: Hardcoded string "Backup folder", should use @string resource [HardcodedText]
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1064: Warning: Hardcoded string "Backup folder", should use @string resource [HardcodedText]
                                         android:text="Backup folder"
                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1024: Warning: Hardcoded string "(/Documents/TextExpander)", should use @string resource [HardcodedText]
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1074: Warning: Hardcoded string "(/Documents/TextExpander)", should use @string resource [HardcodedText]
                                         android:text="(/Documents/TextExpander)"
                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1064: Warning: Hardcoded string "Backup info", should use @string resource [HardcodedText]
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1114: Warning: Hardcoded string "Backup info", should use @string resource [HardcodedText]
                                         android:text="Backup info"
                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1074: Warning: Hardcoded string "Last backup: -nNext backup: -", should use @string resource [HardcodedText]
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1124: Warning: Hardcoded string "Last backup: -nNext backup: -", should use @string resource [HardcodedText]
                                         android:text="Last backup: -\nNext backup: -"
                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1118: Warning: Hardcoded string "Create backup", should use @string resource [HardcodedText]
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1168: Warning: Hardcoded string "Create backup", should use @string resource [HardcodedText]
                                         android:text="Create backup"
                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1127: Warning: Hardcoded string "Create a backup file of all text snippets", should use @string resource [HardcodedText]
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1177: Warning: Hardcoded string "Create a backup file of all text snippets", should use @string resource [HardcodedText]
                                         android:text="Create a backup file of all text snippets"
                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1170: Warning: Hardcoded string "Restore from backup", should use @string resource [HardcodedText]
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1220: Warning: Hardcoded string "Restore from backup", should use @string resource [HardcodedText]
                                         android:text="Restore from backup"
                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1179: Warning: Hardcoded string "Restore text snippets from a backup file", should use @string resource [HardcodedText]
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1229: Warning: Hardcoded string "Restore text snippets from a backup file", should use @string resource [HardcodedText]
                                         android:text="Restore text snippets from a backup file"
                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1224: Warning: Hardcoded string "Statistics", should use @string resource [HardcodedText]
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1274: Warning: Hardcoded string "Statistics", should use @string resource [HardcodedText]
                                 android:text="Statistics"
                                 ~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1273: Warning: Hardcoded string "Enable statistics", should use @string resource [HardcodedText]
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1323: Warning: Hardcoded string "Enable statistics", should use @string resource [HardcodedText]
                                         android:text="Enable statistics"
                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1282: Warning: Hardcoded string "Track saved keystroke count locally on this device", should use @string resource [HardcodedText]
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1332: Warning: Hardcoded string "Track saved keystroke count locally on this device", should use @string resource [HardcodedText]
                                         android:text="Track saved keystroke count locally on this device"
                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1328: Warning: Hardcoded string "Share statistics", should use @string resource [HardcodedText]
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1378: Warning: Hardcoded string "Share statistics", should use @string resource [HardcodedText]
                                         android:text="Share statistics"
                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1337: Warning: Hardcoded string "Anonymously share saved keystroke count to measure total time Text Expander saves worldwide", should use @string resource [HardcodedText]
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1387: Warning: Hardcoded string "Anonymously share saved keystroke count to measure total time Text Expander saves worldwide", should use @string resource [HardcodedText]
                                         android:text="Anonymously share saved keystroke count to measure total time Text Expander saves worldwide"
                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1383: Warning: Hardcoded string "Interaction", should use @string resource [HardcodedText]
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1436: Warning: Hardcoded string "Reset keystrokes counter", should use @string resource [HardcodedText]
+                                        android:text="Reset keystrokes counter"
+                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1446: Warning: Hardcoded string "Reset saved keystrokes count back to 0", should use @string resource [HardcodedText]
+                                        android:text="Reset saved keystrokes count back to 0"
+                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1485: Warning: Hardcoded string "Interaction", should use @string resource [HardcodedText]
                                 android:text="Interaction"
                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1432: Warning: Hardcoded string "Show clipboard access", should use @string resource [HardcodedText]
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1534: Warning: Hardcoded string "Show clipboard access", should use @string resource [HardcodedText]
                                         android:text="Show clipboard access"
                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1441: Warning: Hardcoded string "Show a message when copying text to clipboard", should use @string resource [HardcodedText]
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1543: Warning: Hardcoded string "Show a message when copying text to clipboard", should use @string resource [HardcodedText]
                                         android:text="Show a message when copying text to clipboard"
                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1487: Warning: Hardcoded string "Enable haptic feedback", should use @string resource [HardcodedText]
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1589: Warning: Hardcoded string "Enable haptic feedback", should use @string resource [HardcodedText]
                                         android:text="Enable haptic feedback"
                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1496: Warning: Hardcoded string "Vibrate when interacting with the app", should use @string resource [HardcodedText]
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1598: Warning: Hardcoded string "Vibrate when interacting with the app", should use @string resource [HardcodedText]
                                         android:text="Vibrate when interacting with the app"
                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1542: Warning: Hardcoded string "About", should use @string resource [HardcodedText]
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1644: Warning: Hardcoded string "About", should use @string resource [HardcodedText]
                                 android:text="About"
                                 ~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1591: Warning: Hardcoded string "Text Expander 2R", should use @string resource [HardcodedText]
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1693: Warning: Hardcoded string "Text Expander 2R", should use @string resource [HardcodedText]
                                     android:text="Text Expander 2R"
                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1617: Warning: Hardcoded string "v3.0.29 • Stable", should use @string resource [HardcodedText]
-                                        android:text="v3.0.29 • Stable"
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1719: Warning: Hardcoded string "v3.0.49 • Stable", should use @string resource [HardcodedText]
+                                        android:text="v3.0.49 • Stable"
                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1657: Warning: Hardcoded string "100% Offline", should use @string resource [HardcodedText]
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1759: Warning: Hardcoded string "100% Offline", should use @string resource [HardcodedText]
                                             android:text="100% Offline"
                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1665: Warning: Hardcoded string "Local Storage", should use @string resource [HardcodedText]
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1767: Warning: Hardcoded string "Local Storage", should use @string resource [HardcodedText]
                                             android:text="Local Storage"
                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1697: Warning: Hardcoded string "Zero Battery", should use @string resource [HardcodedText]
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1799: Warning: Hardcoded string "Zero Battery", should use @string resource [HardcodedText]
                                             android:text="Zero Battery"
                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1705: Warning: Hardcoded string "Drain", should use @string resource [HardcodedText]
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1807: Warning: Hardcoded string "Drain", should use @string resource [HardcodedText]
                                             android:text="Drain"
                                             ~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1748: Warning: Hardcoded string "Developer", should use @string resource [HardcodedText]
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1850: Warning: Hardcoded string "Developer", should use @string resource [HardcodedText]
                                             android:text="Developer"
                                             ~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1788: Warning: Hardcoded string "Made in", should use @string resource [HardcodedText]
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1890: Warning: Hardcoded string "Made in", should use @string resource [HardcodedText]
                                             android:text="Made in"
                                             ~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1795: Warning: Hardcoded string "Bangladesh 🇧🇩", should use @string resource [HardcodedText]
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1897: Warning: Hardcoded string "Bangladesh 🇧🇩", should use @string resource [HardcodedText]
                                             android:text="Bangladesh 🇧🇩"
                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1831: Warning: Hardcoded string "Privacy Policy", should use @string resource [HardcodedText]
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1933: Warning: Hardcoded string "Privacy Policy", should use @string resource [HardcodedText]
                                         android:text="Privacy Policy"
                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1859: Warning: Hardcoded string "Rate App", should use @string resource [HardcodedText]
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1961: Warning: Hardcoded string "Rate App", should use @string resource [HardcodedText]
                                         android:text="Rate App"
                                         ~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1914: Warning: Hardcoded string "Text", should use @string resource [HardcodedText]
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:2016: Warning: Hardcoded string "Text", should use @string resource [HardcodedText]
                     android:text="Text"
                     ~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1951: Warning: Hardcoded string "Clipboard", should use @string resource [HardcodedText]
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:2053: Warning: Hardcoded string "Clipboard", should use @string resource [HardcodedText]
                     android:text="Clipboard"
                     ~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:1987: Warning: Hardcoded string "Settings", should use @string resource [HardcodedText]
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:2089: Warning: Hardcoded string "Settings", should use @string resource [HardcodedText]
                     android:text="Settings"
                     ~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:2017: Warning: Hardcoded string "Search", should use @string resource [HardcodedText]
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:2119: Warning: Hardcoded string "Search", should use @string resource [HardcodedText]
             android:contentDescription="Search"
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:2028: Warning: Hardcoded string "Folder", should use @string resource [HardcodedText]
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:2130: Warning: Hardcoded string "Folder", should use @string resource [HardcodedText]
             android:contentDescription="Folder" />
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:2039: Warning: Hardcoded string "Add Shortcut", should use @string resource [HardcodedText]
+D:\Android\Text Extender\app\src\main\res\layout\activity_main.xml:2141: Warning: Hardcoded string "Add Shortcut", should use @string resource [HardcodedText]
             android:contentDescription="Add Shortcut"
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 D:\Android\Text Extender\app\src\main\res\layout\activity_onboarding.xml:39: Warning: Hardcoded string "Welcome to Text Expander 2R", should use @string resource [HardcodedText]
@@ -1081,10 +1115,10 @@ D:\Android\Text Extender\app\src\main\res\layout\dialog_create_folder.xml:71: Wa
 D:\Android\Text Extender\app\src\main\res\layout\dialog_create_folder.xml:80: Warning: Hardcoded string "Create", should use @string resource [HardcodedText]
             android:text="Create"
             ~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\item_clipboard.xml:44: Warning: Hardcoded string "Copy", should use @string resource [HardcodedText]
+D:\Android\Text Extender\app\src\main\res\layout\item_clipboard.xml:45: Warning: Hardcoded string "Copy", should use @string resource [HardcodedText]
             android:contentDescription="Copy"
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\item_clipboard.xml:58: Warning: Hardcoded string "Create Shortcut", should use @string resource [HardcodedText]
+D:\Android\Text Extender\app\src\main\res\layout\item_clipboard.xml:59: Warning: Hardcoded string "Create Shortcut", should use @string resource [HardcodedText]
             android:contentDescription="Create Shortcut"
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 D:\Android\Text Extender\app\src\main\res\layout\item_dialog_action.xml:16: Warning: Hardcoded string "Action Icon", should use @string resource [HardcodedText]
@@ -1093,13 +1127,16 @@ D:\Android\Text Extender\app\src\main\res\layout\item_dialog_action.xml:16: Warn
 D:\Android\Text Extender\app\src\main\res\layout\item_folder_category.xml:31: Warning: Hardcoded string "Category Name", should use @string resource [HardcodedText]
         android:text="Category Name"
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\item_shortcut.xml:47: Warning: Hardcoded string "Copy", should use @string resource [HardcodedText]
+D:\Android\Text Extender\app\src\main\res\layout\item_shortcut.xml:48: Warning: Hardcoded string "Copy", should use @string resource [HardcodedText]
             android:contentDescription="Copy"
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\item_shortcut.xml:61: Warning: Hardcoded string "Options", should use @string resource [HardcodedText]
+D:\Android\Text Extender\app\src\main\res\layout\item_shortcut.xml:62: Warning: Hardcoded string "Options", should use @string resource [HardcodedText]
             android:contentDescription="Options"
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\Android\Text Extender\app\src\main\res\layout\layout_floating_suggestion.xml:98: Warning: Hardcoded string "Drag Handle", should use @string resource [HardcodedText]
+D:\Android\Text Extender\app\src\main\res\layout\layout_floating_suggestion.xml:60: Warning: Hardcoded string "Typing", should use @string resource [HardcodedText]
+                android:text="Typing"
+                ~~~~~~~~~~~~~~~~~~~~~
+D:\Android\Text Extender\app\src\main\res\layout\layout_floating_suggestion.xml:111: Warning: Hardcoded string "Drag Handle", should use @string resource [HardcodedText]
             android:contentDescription="Drag Handle"
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -1117,4 +1154,4 @@ D:\Android\Text Extender\app\src\main\res\layout\layout_floating_suggestion.xml:
    There are quickfixes to automatically extract this hardcoded string into a
    resource lookup.
 
-0 errors, 274 warnings
+0 errors, 294 warnings

@@ -12,6 +12,7 @@
   <androidx.activity/>
   <androidx.ads/>
   <androidx.annotation/>
+  <androidx.annotation.keep/>
   <androidx.appcompat/>
   <androidx.appfunctions/>
   <androidx.appsearch/>
@@ -190,6 +191,7 @@
   <com.android.installreferrer/>
   <com.android.internal.settings/>
   <com.android.java.tools.build/>
+  <com.android.keyattestation/>
   <com.android.kotlin.multiplatform.library/>
   <com.android.legacy-kapt/>
   <com.android.library/>
@@ -239,6 +241,7 @@
   <com.android.tools.screenshot/>
   <com.android.tools.smali/>
   <com.android.tools.studio.leakcanary/>
+  <com.android.tools.test/>
   <com.android.tools.utp/>
   <com.android.volley/>
   <com.crashlytics.sdk.android/>

@@ -27,6 +27,6 @@
       type="MAIN"
       applicationId="com.textexpander2r.android"
       generatedSourceFolders="build\generated\ap_generated_sources\release\out;build\generated\source\buildConfig\release;build\generated\data_binding_base_class_source_out\release\out"
-      desugaredMethodsFiles="C:\Users\KCR\.gradle\caches\9.7.1\transforms\8050201cda79c2b43ae8cbe8669d2cab\transformed\D8BackportedDesugaredMethods.txt">
+      desugaredMethodsFiles="C:\Users\KCR\.gradle\caches\9.7.1\transforms\768b1469e57326e290c96aa3ef2e1de0\transformed\D8BackportedDesugaredMethods.txt">
   </artifact>
 </variant>
