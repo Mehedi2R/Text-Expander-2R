@@ -28,7 +28,6 @@ int drawable bg_bento_chip 0x0
 int drawable bg_bento_chip_clickable 0x0
 int drawable bg_bottom_nav_indicator 0x0
 int drawable bg_btn_privacy 0x0
-int drawable bg_btn_rate_app 0x0
 int drawable bg_circle_arrow 0x0
 int drawable bg_circle_arrow_outline 0x0
 int drawable bg_circle_warning 0x0
@@ -97,7 +96,6 @@ int drawable ic_settings_statistics 0x0
 int drawable ic_settings_suggestion 0x0
 int drawable ic_share_anonymous 0x0
 int drawable ic_shield_check 0x0
-int drawable ic_star 0x0
 int drawable ic_tab_clipboard 0x0
 int drawable ic_tab_settings 0x0
 int drawable ic_tab_text 0x0
@@ -119,7 +117,6 @@ int id bodyStatistics 0x0
 int id bodySuggestion 0x0
 int id btnAboutDeveloper 0x0
 int id btnAboutPrivacyPolicy 0x0
-int id btnAboutRateApp 0x0
 int id btnCancel 0x0
 int id btnCancelFolder 0x0
 int id btnContinue 0x0

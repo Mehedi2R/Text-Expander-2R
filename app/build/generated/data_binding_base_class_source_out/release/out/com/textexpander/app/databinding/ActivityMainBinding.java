@@ -78,9 +78,6 @@ public final class ActivityMainBinding implements ViewBinding {
   public final LinearLayout btnAboutPrivacyPolicy;
 
   @NonNull
-  public final LinearLayout btnAboutRateApp;
-
-  @NonNull
   public final ImageView btnDockAdd;
 
   @NonNull
@@ -322,11 +319,10 @@ public final class ActivityMainBinding implements ViewBinding {
       @NonNull LinearLayout bodyData, @NonNull LinearLayout bodyDetection,
       @NonNull LinearLayout bodyInteraction, @NonNull LinearLayout bodyStatistics,
       @NonNull LinearLayout bodySuggestion, @NonNull LinearLayout btnAboutDeveloper,
-      @NonNull LinearLayout btnAboutPrivacyPolicy, @NonNull LinearLayout btnAboutRateApp,
-      @NonNull ImageView btnDockAdd, @NonNull ImageView btnDockFolder,
-      @NonNull ImageView btnDockSearch, @NonNull ImageView btnHeaderBack,
-      @NonNull ImageView btnHeaderInfo, @NonNull LinearLayout btnResetStatistics,
-      @NonNull MaterialButton btnSettingsAllowBackground,
+      @NonNull LinearLayout btnAboutPrivacyPolicy, @NonNull ImageView btnDockAdd,
+      @NonNull ImageView btnDockFolder, @NonNull ImageView btnDockSearch,
+      @NonNull ImageView btnHeaderBack, @NonNull ImageView btnHeaderInfo,
+      @NonNull LinearLayout btnResetStatistics, @NonNull MaterialButton btnSettingsAllowBackground,
       @NonNull MaterialButton btnSettingsFixRestricted,
       @NonNull MaterialButton btnSettingsToggleService, @NonNull LinearLayout cardHeaderBanner,
       @NonNull LinearLayout cardSettingAbout, @NonNull LinearLayout cardSettingClipboard,
@@ -383,7 +379,6 @@ public final class ActivityMainBinding implements ViewBinding {
     this.bodySuggestion = bodySuggestion;
     this.btnAboutDeveloper = btnAboutDeveloper;
     this.btnAboutPrivacyPolicy = btnAboutPrivacyPolicy;
-    this.btnAboutRateApp = btnAboutRateApp;
     this.btnDockAdd = btnDockAdd;
     this.btnDockFolder = btnDockFolder;
     this.btnDockSearch = btnDockSearch;
@@ -584,12 +579,6 @@ public final class ActivityMainBinding implements ViewBinding {
       id = R.id.btnAboutPrivacyPolicy;
       LinearLayout btnAboutPrivacyPolicy = ViewBindings.findChildViewById(rootView, id);
       if (btnAboutPrivacyPolicy == null) {
-        break missingId;
-      }
-
-      id = R.id.btnAboutRateApp;
-      LinearLayout btnAboutRateApp = ViewBindings.findChildViewById(rootView, id);
-      if (btnAboutRateApp == null) {
         break missingId;
       }
 
@@ -1064,18 +1053,17 @@ public final class ActivityMainBinding implements ViewBinding {
       return new ActivityMainBinding((CoordinatorLayout) rootView, arrowAbout, arrowClipboard,
           arrowData, arrowDetection, arrowInteraction, arrowStatistics, arrowSuggestion, bodyAbout,
           bodyClipboard, bodyData, bodyDetection, bodyInteraction, bodyStatistics, bodySuggestion,
-          btnAboutDeveloper, btnAboutPrivacyPolicy, btnAboutRateApp, btnDockAdd, btnDockFolder,
-          btnDockSearch, btnHeaderBack, btnHeaderInfo, btnResetStatistics,
-          btnSettingsAllowBackground, btnSettingsFixRestricted, btnSettingsToggleService,
-          cardHeaderBanner, cardSettingAbout, cardSettingClipboard, cardSettingData,
-          cardSettingDetection, cardSettingInteraction, cardSettingStatistics,
-          cardSettingSuggestion, cardSettingsAccessibility, cardSettingsBackground, etSearch,
-          floatingDock, headerAbout, headerClipboard, headerData, headerDetection,
-          headerInteraction, headerStatistics, headerSuggestion, iconClipboard, iconSettings,
-          iconText, imgHeaderIcon, imgSettingsStatusIcon, indicatorClipboard, indicatorSettings,
-          indicatorText, labelClipboard, labelSettings, labelText, layoutBottomNav,
-          layoutEmptyShortcuts, layoutSearchBar, pillHeaderStats, rowBackupFolder, rowBackupInfo,
-          rowCreateBackup, rowRestoreBackup, rvClipboard, rvFolders, rvShortcuts,
+          btnAboutDeveloper, btnAboutPrivacyPolicy, btnDockAdd, btnDockFolder, btnDockSearch,
+          btnHeaderBack, btnHeaderInfo, btnResetStatistics, btnSettingsAllowBackground,
+          btnSettingsFixRestricted, btnSettingsToggleService, cardHeaderBanner, cardSettingAbout,
+          cardSettingClipboard, cardSettingData, cardSettingDetection, cardSettingInteraction,
+          cardSettingStatistics, cardSettingSuggestion, cardSettingsAccessibility,
+          cardSettingsBackground, etSearch, floatingDock, headerAbout, headerClipboard, headerData,
+          headerDetection, headerInteraction, headerStatistics, headerSuggestion, iconClipboard,
+          iconSettings, iconText, imgHeaderIcon, imgSettingsStatusIcon, indicatorClipboard,
+          indicatorSettings, indicatorText, labelClipboard, labelSettings, labelText,
+          layoutBottomNav, layoutEmptyShortcuts, layoutSearchBar, pillHeaderStats, rowBackupFolder,
+          rowBackupInfo, rowCreateBackup, rowRestoreBackup, rvClipboard, rvFolders, rvShortcuts,
           switchDetectAllLanguages, switchDetectInAllApps, switchEnableClipboard,
           switchEnableDetection, switchEnableHapticFeedback, switchEnableStatistics,
           switchEnableSuggestionOverlay, switchKeepAliveService, switchMatchFromBeginning,

@@ -29,7 +29,6 @@ drawable bg_bento_chip
 drawable bg_bento_chip_clickable
 drawable bg_bottom_nav_indicator
 drawable bg_btn_privacy
-drawable bg_btn_rate_app
 drawable bg_circle_arrow
 drawable bg_circle_arrow_outline
 drawable bg_circle_warning
@@ -98,7 +97,6 @@ drawable ic_settings_statistics
 drawable ic_settings_suggestion
 drawable ic_share_anonymous
 drawable ic_shield_check
-drawable ic_star
 drawable ic_tab_clipboard
 drawable ic_tab_settings
 drawable ic_tab_text
@@ -120,7 +118,6 @@ id bodyStatistics
 id bodySuggestion
 id btnAboutDeveloper
 id btnAboutPrivacyPolicy
-id btnAboutRateApp
 id btnCancel
 id btnCancelFolder
 id btnContinue

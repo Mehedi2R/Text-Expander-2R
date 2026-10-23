@@ -18569,7 +18569,6 @@ com.textexpander.app.R$drawable:
     public static int bg_bento_chip
     public static int bg_bento_chip_clickable
     public static int bg_btn_privacy
-    public static int bg_btn_rate_app
     public static int bg_circle_arrow
     public static int bg_circle_arrow_outline
     public static int bg_circle_warning
@@ -18628,7 +18627,6 @@ com.textexpander.app.R$drawable:
     public static int ic_settings_suggestion
     public static int ic_share_anonymous
     public static int ic_shield_check
-    public static int ic_star
     public static int ic_tab_settings
     public static int ic_vibrate_phone
     public static int ic_warning

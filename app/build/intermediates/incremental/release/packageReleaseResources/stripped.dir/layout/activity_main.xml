@@ -1902,67 +1902,31 @@
                                 </LinearLayout>
                             </LinearLayout>
 
-                            <!-- Bottom Action Buttons: Privacy Policy & Rate App -->
+                            <!-- Bottom Action Button: Privacy Policy -->
                             <LinearLayout
+                                android:id="@+id/btnAboutPrivacyPolicy"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
+                                android:layout_height="44dp"
+                                android:background="@drawable/bg_btn_privacy"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:gravity="center"
                                 android:orientation="horizontal">
 
-                                <LinearLayout
-                                    android:id="@+id/btnAboutPrivacyPolicy"
-                                    android:layout_width="0dp"
-                                    android:layout_height="44dp"
-                                    android:layout_weight="1"
-                                    android:layout_marginEnd="5dp"
-                                    android:background="@drawable/bg_btn_privacy"
-                                    android:clickable="true"
-                                    android:focusable="true"
-                                    android:gravity="center"
-                                    android:orientation="horizontal">
+                                <ImageView
+                                    android:layout_width="16dp"
+                                    android:layout_height="16dp"
+                                    android:src="@drawable/ic_lock"
+                                    app:tint="@color/primary" />
 
-                                    <ImageView
-                                        android:layout_width="16dp"
-                                        android:layout_height="16dp"
-                                        android:src="@drawable/ic_lock"
-                                        app:tint="@color/primary" />
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginStart="8dp"
-                                        android:text="Privacy Policy"
-                                        android:textColor="@color/text_primary"
-                                        android:textSize="13sp"
-                                        android:textStyle="bold" />
-                                </LinearLayout>
-
-                                <LinearLayout
-                                    android:id="@+id/btnAboutRateApp"
-                                    android:layout_width="0dp"
-                                    android:layout_height="44dp"
-                                    android:layout_weight="1"
-                                    android:layout_marginStart="5dp"
-                                    android:background="@drawable/bg_btn_rate_app"
-                                    android:clickable="true"
-                                    android:focusable="true"
-                                    android:gravity="center"
-                                    android:orientation="horizontal">
-
-                                    <ImageView
-                                        android:layout_width="16dp"
-                                        android:layout_height="16dp"
-                                        android:src="@drawable/ic_star"
-                                        app:tint="#0B0E14" />
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginStart="8dp"
-                                        android:text="Rate App"
-                                        android:textColor="#0B0E14"
-                                        android:textSize="13sp"
-                                        android:textStyle="bold" />
-                                </LinearLayout>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="8dp"
+                                    android:text="Privacy Policy"
+                                    android:textColor="@color/text_primary"
+                                    android:textSize="13sp"
+                                    android:textStyle="bold" />
                             </LinearLayout>
 
                         </LinearLayout>

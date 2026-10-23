@@ -796,21 +796,6 @@ class MainActivity : AppCompatActivity() {
             showPrivacyPolicyDialog()
         }
 
-        binding.btnAboutRateApp.setOnClickListener {
-            try {
-                val intent = Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=$packageName")).apply {
-                    addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                }
-                startActivity(intent)
-            } catch (_: Exception) {
-                try {
-                    val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=$packageName")).apply {
-                        addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                    }
-                    startActivity(intent)
-                } catch (_: Exception) {}
-            }
-        }
     }
 
     private fun showPrivacyPolicyDialog() {
