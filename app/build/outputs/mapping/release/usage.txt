@@ -18567,7 +18567,7 @@ com.textexpander.app.R$drawable:
     public static int app_logo
     public static int bg_app_logo_glow
     public static int bg_bento_chip
-    public static int bg_bento_chip_clickable
+    public static int bg_box_send_btn
     public static int bg_btn_privacy
     public static int bg_circle_arrow
     public static int bg_circle_arrow_outline
@@ -18581,7 +18581,6 @@ com.textexpander.app.R$drawable:
     public static int bg_info_pill_box
     public static int bg_noir_btn_cancel
     public static int bg_noir_btn_save
-    public static int bg_noir_card
     public static int bg_noir_keycap
     public static int bg_noir_paste_chip
     public static int bg_onboarding_card_1
@@ -18632,8 +18631,11 @@ com.textexpander.app.R$drawable:
     public static int ic_warning
     private void <init>()
 com.textexpander.app.R$id:
+    public static int rootFloatingBox
     public static int rootFolderItem
+    public static int rootVariableDialog
     public static int tilFolderName
+    public static int tvBoxSendLabel
     public static int tvHumanTypingLabel
     private void <init>()
 com.textexpander.app.R$layout:
@@ -18698,7 +18700,9 @@ com.textexpander.app.databinding.ItemFolderCategoryBinding:
 com.textexpander.app.databinding.ItemShortcutBinding:
     public synthetic bridge android.view.View getRoot()
     public static com.textexpander.app.databinding.ItemShortcutBinding inflate(android.view.LayoutInflater)
+com.textexpander.app.databinding.LayoutFloatingBoxBinding
 com.textexpander.app.databinding.LayoutFloatingSuggestionBinding
+com.textexpander.app.databinding.LayoutFloatingVariablesBinding
 com.textexpander.app.service.TextExpanderAccessibilityService$ShortcutData:
     public final long component1()
     public final java.lang.String component2()
@@ -18735,6 +18739,8 @@ com.textexpander.app.ui.MainViewModel:
     public static synthetic void saveShortcut$default(com.textexpander.app.ui.MainViewModel,long,java.lang.String,java.lang.String,java.lang.String,kotlin.jvm.functions.Function2,int,java.lang.Object)
 com.textexpander.app.ui.ShortcutsAdapter:
     public synthetic void <init>(kotlin.jvm.functions.Function1,kotlin.jvm.functions.Function1,kotlin.jvm.functions.Function1,kotlin.jvm.functions.Function1,int,kotlin.jvm.internal.DefaultConstructorMarker)
+com.textexpander.app.util.VariableHelper:
+    public final boolean containsVariables(java.lang.String)
 kotlin.ArrayIntrinsicsKt
 kotlin.BuilderInference
 kotlin.CharCodeJVMKt
@@ -22278,12 +22284,10 @@ kotlin.properties.PropertyDelegateProvider
 kotlin.properties.ReadOnlyProperty
 kotlin.properties.ReadWriteProperty
 kotlin.random.AbstractPlatformRandom:
-    public int nextBits(int)
     public boolean nextBoolean()
     public byte[] nextBytes(byte[])
     public double nextDouble()
     public float nextFloat()
-    public long nextLong()
 kotlin.random.KotlinRandom$Companion
 kotlin.random.KotlinRandom
 kotlin.random.PlatformRandom$Companion
@@ -22291,7 +22295,6 @@ kotlin.random.PlatformRandom
 kotlin.random.PlatformRandomKt
 kotlin.random.Random$Default$Serialized
 kotlin.random.Random$Default:
-    public int nextBits(int)
     public boolean nextBoolean()
     public byte[] nextBytes(int)
     public byte[] nextBytes(byte[])
@@ -22300,14 +22303,10 @@ kotlin.random.Random$Default:
     public double nextDouble(double)
     public double nextDouble(double,double)
     public float nextFloat()
-    public int nextInt(int,int)
-    public long nextLong()
     public long nextLong(long)
-    public long nextLong(long,long)
     private final void readObject(java.io.ObjectInputStream)
     private final java.lang.Object writeReplace()
 kotlin.random.Random:
-    public abstract int nextBits(int)
     public boolean nextBoolean()
     public byte[] nextBytes(int)
     public byte[] nextBytes(byte[])
@@ -22317,19 +22316,19 @@ kotlin.random.Random:
     public double nextDouble(double)
     public double nextDouble(double,double)
     public float nextFloat()
-    public int nextInt(int,int)
-    public long nextLong()
     public long nextLong(long)
-    public long nextLong(long,long)
-kotlin.random.RandomKt
+kotlin.random.RandomKt:
+    public static final kotlin.random.Random Random(int)
+    public static final kotlin.random.Random Random(long)
+    public static final void checkRangeBounds(double,double)
+    public static final int nextInt(kotlin.random.Random,kotlin.ranges.IntRange)
+    public static final long nextLong(kotlin.random.Random,kotlin.ranges.LongRange)
 kotlin.random.URandomKt
 kotlin.random.XorWowRandom$Companion
 kotlin.random.XorWowRandom
 kotlin.random.jdk8.PlatformThreadLocalRandom:
     public double nextDouble(double)
-    public int nextInt(int,int)
     public long nextLong(long)
-    public long nextLong(long,long)
 kotlin.ranges.CharProgression$Companion
 kotlin.ranges.CharProgression
 kotlin.ranges.CharProgressionIterator
@@ -23036,16 +23035,46 @@ kotlin.text.MatchResult
 kotlin.text.MatcherMatchResult$groupValues$1
 kotlin.text.MatcherMatchResult$groups$1
 kotlin.text.MatcherMatchResult
-kotlin.text.Regex$Companion
+kotlin.text.Regex$Companion:
+    public final java.lang.String escapeReplacement(java.lang.String)
+    public final kotlin.text.Regex fromLiteral(java.lang.String)
 kotlin.text.Regex$Serialized$Companion
 kotlin.text.Regex$Serialized
 kotlin.text.Regex$findAll$2
 kotlin.text.Regex$special$$inlined$fromInt$1
 kotlin.text.Regex$splitToSequence$1
-kotlin.text.Regex
+kotlin.text.Regex:
+    private java.util.Set _options
+    public void <init>(java.lang.String)
+    public void <init>(java.lang.String,java.util.Set)
+    public static final synthetic java.util.regex.Pattern access$getNativePattern$p(kotlin.text.Regex)
+    public final boolean containsMatchIn(java.lang.CharSequence)
+    public final kotlin.text.MatchResult find(java.lang.CharSequence,int)
+    public static synthetic kotlin.text.MatchResult find$default(kotlin.text.Regex,java.lang.CharSequence,int,int,java.lang.Object)
+    public final kotlin.sequences.Sequence findAll(java.lang.CharSequence,int)
+    public static synthetic kotlin.sequences.Sequence findAll$default(kotlin.text.Regex,java.lang.CharSequence,int,int,java.lang.Object)
+    private static final kotlin.text.MatchResult findAll$lambda$1(kotlin.text.Regex,java.lang.CharSequence,int)
+    public final java.util.Set getOptions()
+    public final java.lang.String getPattern()
+    public final kotlin.text.MatchResult matchAt(java.lang.CharSequence,int)
+    public final kotlin.text.MatchResult matchEntire(java.lang.CharSequence)
+    public final boolean matches(java.lang.CharSequence)
+    public final boolean matchesAt(java.lang.CharSequence,int)
+    private final void readObject(java.io.ObjectInputStream)
+    public final java.lang.String replace(java.lang.CharSequence,kotlin.jvm.functions.Function1)
+    public final java.util.List split(java.lang.CharSequence,int)
+    public static synthetic java.util.List split$default(kotlin.text.Regex,java.lang.CharSequence,int,int,java.lang.Object)
+    public final kotlin.sequences.Sequence splitToSequence(java.lang.CharSequence,int)
+    public static synthetic kotlin.sequences.Sequence splitToSequence$default(kotlin.text.Regex,java.lang.CharSequence,int,int,java.lang.Object)
+    public final java.util.regex.Pattern toPattern()
+    private final java.lang.Object writeReplace()
 kotlin.text.RegexKt$fromInt$1$1
 kotlin.text.RegexKt
-kotlin.text.RegexOption
+kotlin.text.RegexOption:
+    private static final synthetic kotlin.enums.EnumEntries $ENTRIES
+    private final int mask
+    public static kotlin.enums.EnumEntries getEntries()
+    public int getMask()
 kotlin.text.StringsKt:
     private void <init>()
 kotlin.text.StringsKt__AppendableKt:
@@ -30579,6 +30608,9 @@ com.textexpander.app.ui.ShortcutsAdapter$ShortcutViewHolder:
 com.textexpander.app.ui.ShortcutsAdapter:
     public static void onBindViewHolder$2()
     public static com.textexpander.app.ui.ShortcutsAdapter$ShortcutViewHolder onCreateViewHolder()
+com.textexpander.app.util.VariableHelper:
+    public static final com.textexpander.app.util.VariableHelper INSTANCE
+    public static java.lang.String replaceUserVariables()
 kotlin.ExceptionsKt__ExceptionsKt
 kotlin.Lazy:
     public abstract java.lang.Object getValue()
@@ -30781,17 +30813,16 @@ kotlin.jvm.internal.StringCompanionObject
 kotlin.jvm.internal.markers.KMappedMarker
 kotlin.jvm.internal.markers.KMutableIterable
 kotlin.random.AbstractPlatformRandom:
-    public abstract int nextInt()
     public abstract int nextInt$1()
 kotlin.random.FallbackThreadLocalRandom$implStorage$1:
     public static java.util.Random initialValue()
 kotlin.random.Random$Default:
-    public final int nextInt()
     public final int nextInt$1()
 kotlin.random.Random:
     public static final kotlin.random.Random$Default Default
-    public abstract int nextInt()
     public abstract int nextInt$1()
+kotlin.random.RandomKt:
+    public static final int fastLog2(int)
 kotlin.ranges.IntProgression$Companion
 kotlin.ranges.IntProgression:
     public static final kotlin.ranges.IntProgression$Companion Companion
@@ -30818,6 +30849,9 @@ kotlin.text.LinesIterator$State
 kotlin.text.LinesIterator:
     static void <clinit>()
     public static java.lang.String next()
+kotlin.text.Regex$Companion
+kotlin.text.Regex
+kotlin.text.RegexOption
 kotlin.text.StringsKt
 kotlin.text.StringsKt__StringsJVMKt:
     public static final boolean regionMatches(java.lang.String,java.lang.String,int,int,boolean)

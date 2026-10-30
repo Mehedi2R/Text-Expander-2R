@@ -11,8 +11,8 @@
       "type": "SINGLE",
       "filters": [],
       "attributes": [],
-      "versionCode": 349,
-      "versionName": "3.0.49",
+      "versionCode": 351,
+      "versionName": "3.0.51",
       "outputFile": "shrunk-resources-proto-format-release.ap_"
     }
   ],

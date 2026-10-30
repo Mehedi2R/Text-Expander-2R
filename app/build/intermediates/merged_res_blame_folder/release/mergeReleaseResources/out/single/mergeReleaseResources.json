@@ -20,12 +20,12 @@
         "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\ic_cloud_upload.xml"
     },
     {
-        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_bg_btn_privacy.xml.flat",
-        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\bg_btn_privacy.xml"
-    },
-    {
         "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_ic_settings_about.xml.flat",
         "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\ic_settings_about.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_bg_btn_privacy.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\bg_btn_privacy.xml"
     },
     {
         "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_bg_version_pill.xml.flat",
@@ -160,6 +160,10 @@
         "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\bg_btn_rate_app.xml"
     },
     {
+        "merged": "com.textexpander.app-release-41:/layout_layout_floating_box.xml.flat",
+        "source": "com.textexpander.app-main-42:/layout/layout_floating_box.xml"
+    },
+    {
         "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\mipmap-xxhdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\mipmap-xxhdpi\\ic_launcher.png"
     },
@@ -230,6 +234,14 @@
     {
         "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_ic_arrow_back.xml.flat",
         "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\ic_arrow_back.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\layout_layout_floating_variables.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\layout\\layout_floating_variables.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\layout_layout_floating_box.xml.flat",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\layout\\layout_floating_box.xml"
     },
     {
         "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\xml_data_extraction_rules.xml.flat",
@@ -388,10 +400,6 @@
         "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\ic_bolt.xml"
     },
     {
-        "merged": "com.textexpander.app-release-41:/layout_activity_main.xml.flat",
-        "source": "com.textexpander.app-main-42:/layout/activity_main.xml"
-    },
-    {
         "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\mipmap-xhdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\mipmap-xhdpi\\ic_launcher.png"
     },
@@ -426,6 +434,10 @@
     {
         "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_ic_shield_check.xml.flat",
         "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\drawable\\ic_shield_check.xml"
+    },
+    {
+        "merged": "com.textexpander.app-release-41:/drawable_bg_box_send_btn.xml.flat",
+        "source": "com.textexpander.app-main-42:/drawable/bg_box_send_btn.xml"
     },
     {
         "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-release-41:\\drawable_bg_stats_pill.xml.flat",

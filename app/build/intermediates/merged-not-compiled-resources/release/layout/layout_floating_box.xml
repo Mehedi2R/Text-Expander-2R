@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootFloatingBox"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_floating_suggestion_card"
+    android:elevation="14dp"
+    android:padding="7dp">
+
+    <!-- Header: Title + Human Typing Toggle + Close Button -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingBottom="4dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_suggestion_key_pill"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="2dp"
+            android:text="Quick Box"
+            android:textColor="@color/pill_text"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <!-- Human Typing Toggle -->
+        <LinearLayout
+            android:id="@+id/layoutBoxHumanTyping"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="2dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Human"
+                android:textSize="11.5sp"
+                android:textColor="@color/text_secondary"
+                android:layout_marginEnd="4dp" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchBoxHumanTyping"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                app:thumbTint="@color/switch_thumb_selector"
+                app:trackTint="@color/switch_track_selector" />
+        </LinearLayout>
+
+        <!-- Close button (X) -->
+        <FrameLayout
+            android:id="@+id/btnBoxClose"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="6dp"
+            android:background="@drawable/bg_bento_chip_clickable"
+            android:clickable="true"
+            android:focusable="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="✕"
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <!-- Expanded Input Box (Comfortable size, tight gaps) -->
+    <EditText
+        android:id="@+id/etBoxInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="105dp"
+        android:maxHeight="220dp"
+        android:background="@drawable/bg_noir_card"
+        android:padding="9dp"
+        android:hint="Type or paste text here..."
+        android:textColor="@color/text_primary"
+        android:textColorHint="@color/text_tertiary"
+        android:textSize="14sp"
+        android:lineSpacingExtra="2dp"
+        android:gravity="top|start"
+        android:scrollbars="vertical"
+        android:isScrollContainer="true"
+        android:inputType="textMultiLine" />
+
+    <!-- Action Bar: Clean Modern Type Start Button (Clear removed, tight space) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingTop="5dp">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:id="@+id/btnBoxSend"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:background="@drawable/bg_box_send_btn"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:paddingHorizontal="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvBoxSendLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Type Start"
+                android:textColor="#0B0E14"
+                android:textSize="12.5sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

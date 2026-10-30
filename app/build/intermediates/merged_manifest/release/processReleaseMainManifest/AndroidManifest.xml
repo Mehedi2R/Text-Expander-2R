@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.textexpander2r.android"
-    android:versionCode="349"
-    android:versionName="3.0.49" >
+    android:versionCode="351"
+    android:versionName="3.0.51" >
 
     <uses-sdk
         android:minSdkVersion="26"

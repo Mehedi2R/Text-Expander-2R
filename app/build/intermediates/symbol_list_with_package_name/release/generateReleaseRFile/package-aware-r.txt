@@ -28,6 +28,7 @@ drawable bg_app_logo_glow
 drawable bg_bento_chip
 drawable bg_bento_chip_clickable
 drawable bg_bottom_nav_indicator
+drawable bg_box_send_btn
 drawable bg_btn_privacy
 drawable bg_circle_arrow
 drawable bg_circle_arrow_outline
@@ -118,6 +119,8 @@ id bodyStatistics
 id bodySuggestion
 id btnAboutDeveloper
 id btnAboutPrivacyPolicy
+id btnBoxClose
+id btnBoxSend
 id btnCancel
 id btnCancelFolder
 id btnContinue
@@ -139,6 +142,8 @@ id btnSettingsToggleService
 id btnShortcutCopy
 id btnShortcutMenu
 id btnToggleRestrictedGuide
+id btnVarClose
+id btnVarInsert
 id cardAllowBackground
 id cardEnableAccessibility
 id cardHeaderBanner
@@ -152,6 +157,7 @@ id cardSettingStatistics
 id cardSettingSuggestion
 id cardSettingsAccessibility
 id cardSettingsBackground
+id etBoxInput
 id etExpandedText
 id etFolderName
 id etSearch
@@ -185,14 +191,20 @@ id labelSettings
 id labelText
 id layoutActionButtons
 id layoutBottomNav
+id layoutBoxHumanTyping
 id layoutEmptyShortcuts
 id layoutHumanTyping
 id layoutRestrictedDetails
 id layoutSearchBar
 id layoutSuggestionGrip
+id layoutVarHumanTyping
+id layoutVariableChipsContainer
+id layoutVariableFieldsContainer
 id pillHeaderStats
+id rootFloatingBox
 id rootFolderItem
 id rootSuggestionBar
+id rootVariableDialog
 id rowBackupFolder
 id rowBackupInfo
 id rowCreateBackup
@@ -202,6 +214,7 @@ id rvFolders
 id rvShortcuts
 id scrollSuggestionText
 id scrollViewContent
+id switchBoxHumanTyping
 id switchDetectAllLanguages
 id switchDetectInAllApps
 id switchEnableClipboard
@@ -215,6 +228,7 @@ id switchMatchFromBeginning
 id switchOptimizedDetection
 id switchShareStatistics
 id switchShowClipboardAccess
+id switchVarHumanTyping
 id tabClipboard
 id tabSettings
 id tabText
@@ -226,6 +240,7 @@ id tvAboutVersion
 id tvActionTitle
 id tvBackupFolderPath
 id tvBackupInfoDetails
+id tvBoxSendLabel
 id tvClipboardContent
 id tvClipboardCount
 id tvExpandedPreview
@@ -260,7 +275,9 @@ layout item_clipboard
 layout item_dialog_action
 layout item_folder_category
 layout item_shortcut
+layout layout_floating_box
 layout layout_floating_suggestion
+layout layout_floating_variables
 mipmap ic_launcher
 mipmap ic_launcher_round
 string accessibility_service_description

@@ -8,28 +8,20 @@
         "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\layout\\item_folder_category.xml"
     },
     {
-        "merged": "com.textexpander.app-mergeReleaseResources-39:/layout/activity_main.xml",
-        "source": "com.textexpander.app-main-42:/layout/activity_main.xml"
-    },
-    {
         "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-mergeReleaseResources-39:\\layout\\activity_onboarding.xml",
         "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\layout\\activity_onboarding.xml"
-    },
-    {
-        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-mergeReleaseResources-39:\\layout\\activity_main.xml",
-        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\layout\\activity_main.xml"
     },
     {
         "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-mergeReleaseResources-39:\\layout\\activity_add_edit_shortcut.xml",
         "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\layout\\activity_add_edit_shortcut.xml"
     },
     {
-        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-mergeReleaseResources-39:\\layout\\item_shortcut.xml",
-        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\layout\\item_shortcut.xml"
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-mergeReleaseResources-39:\\layout\\layout_floating_variables.xml",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\layout\\layout_floating_variables.xml"
     },
     {
-        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-mergeReleaseResources-39:\\layout\\item_clipboard.xml",
-        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\layout\\item_clipboard.xml"
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-mergeReleaseResources-39:\\layout\\item_shortcut.xml",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\layout\\item_shortcut.xml"
     },
     {
         "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-mergeReleaseResources-39:\\layout\\dialog_create_folder.xml",
@@ -38,5 +30,21 @@
     {
         "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-mergeReleaseResources-39:\\layout\\item_dialog_action.xml",
         "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\layout\\item_dialog_action.xml"
+    },
+    {
+        "merged": "com.textexpander.app-mergeReleaseResources-39:/layout/layout_floating_box.xml",
+        "source": "com.textexpander.app-main-42:/layout/layout_floating_box.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-mergeReleaseResources-39:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-mergeReleaseResources-39:\\layout\\layout_floating_box.xml",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\layout\\layout_floating_box.xml"
+    },
+    {
+        "merged": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-mergeReleaseResources-39:\\layout\\item_clipboard.xml",
+        "source": "C:\\Users\\KCR\\.gradle\\daemon\\9.7.1\\com.textexpander.app-main-42:\\layout\\item_clipboard.xml"
     }
 ]

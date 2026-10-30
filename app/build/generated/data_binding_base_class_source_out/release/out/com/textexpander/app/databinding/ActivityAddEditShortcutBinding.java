@@ -48,6 +48,9 @@ public final class ActivityAddEditShortcutBinding implements ViewBinding {
   public final LinearLayout layoutActionButtons;
 
   @NonNull
+  public final LinearLayout layoutVariableChipsContainer;
+
+  @NonNull
   public final NestedScrollView scrollViewContent;
 
   @NonNull
@@ -70,6 +73,7 @@ public final class ActivityAddEditShortcutBinding implements ViewBinding {
       @NonNull LinearLayout btnPasteClipboard, @NonNull LinearLayout btnSave,
       @NonNull LinearLayout cardHeaderBanner, @NonNull TextInputEditText etExpandedText,
       @NonNull TextInputEditText etShortcutKey, @NonNull LinearLayout layoutActionButtons,
+      @NonNull LinearLayout layoutVariableChipsContainer,
       @NonNull NestedScrollView scrollViewContent, @NonNull TextInputLayout tilExpandedText,
       @NonNull TextInputLayout tilShortcutKey, @NonNull TextView tvFolderBadge,
       @NonNull TextView tvHeaderTitle, @NonNull TextView tvSizeCounter) {
@@ -82,6 +86,7 @@ public final class ActivityAddEditShortcutBinding implements ViewBinding {
     this.etExpandedText = etExpandedText;
     this.etShortcutKey = etShortcutKey;
     this.layoutActionButtons = layoutActionButtons;
+    this.layoutVariableChipsContainer = layoutVariableChipsContainer;
     this.scrollViewContent = scrollViewContent;
     this.tilExpandedText = tilExpandedText;
     this.tilShortcutKey = tilShortcutKey;
@@ -165,6 +170,12 @@ public final class ActivityAddEditShortcutBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.layoutVariableChipsContainer;
+      LinearLayout layoutVariableChipsContainer = ViewBindings.findChildViewById(rootView, id);
+      if (layoutVariableChipsContainer == null) {
+        break missingId;
+      }
+
       id = R.id.scrollViewContent;
       NestedScrollView scrollViewContent = ViewBindings.findChildViewById(rootView, id);
       if (scrollViewContent == null) {
@@ -203,8 +214,8 @@ public final class ActivityAddEditShortcutBinding implements ViewBinding {
 
       return new ActivityAddEditShortcutBinding((LinearLayout) rootView, btnCancel, btnHeaderBack,
           btnPasteClipboard, btnSave, cardHeaderBanner, etExpandedText, etShortcutKey,
-          layoutActionButtons, scrollViewContent, tilExpandedText, tilShortcutKey, tvFolderBadge,
-          tvHeaderTitle, tvSizeCounter);
+          layoutActionButtons, layoutVariableChipsContainer, scrollViewContent, tilExpandedText,
+          tilShortcutKey, tvFolderBadge, tvHeaderTitle, tvSizeCounter);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

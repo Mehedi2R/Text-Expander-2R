@@ -28,6 +28,11 @@ import android.view.accessibility.AccessibilityNodeInfo
 import android.view.accessibility.AccessibilityWindowInfo
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.EditText
+import android.widget.LinearLayout
+import android.widget.FrameLayout
+import android.graphics.Typeface
+import androidx.core.content.ContextCompat
 import androidx.appcompat.view.ContextThemeWrapper
 import androidx.appcompat.widget.SwitchCompat
 import androidx.core.widget.NestedScrollView
@@ -105,6 +110,23 @@ class TextExpanderAccessibilityService : AccessibilityService() {
     private var scrollSuggestionText: NestedScrollView? = null
     private var switchHumanTyping: SwitchCompat? = null
     private var isFloatingViewAdded = false
+
+    // Floating Quick Box overlay state (/box or box)
+    private var floatingBoxView: View? = null
+    private var etBoxInput: EditText? = null
+    private var switchBoxHumanTyping: SwitchCompat? = null
+    private var isFloatingBoxAdded = false
+
+    // Floating Variable input dialog state
+    private var floatingVarView: View? = null
+    private var switchVarHumanTyping: SwitchCompat? = null
+    private var layoutVarContainer: LinearLayout? = null
+    private var isFloatingVarAdded = false
+    private var pendingVariableTemplate: String = ""
+    private var pendingVariableTargetNode: AccessibilityNodeInfo? = null
+    private var pendingVariableFullText: String = ""
+    private var pendingVariableStart: Int = -1
+    private var pendingVariableEnd: Int = -1
 
     private var currentMatchedKey: String = ""
     private var currentExpansionText: String = ""
@@ -803,11 +825,35 @@ class TextExpanderAccessibilityService : AccessibilityService() {
             val candidateEnd = cursorIndex - 1
             val res = tryFindMatch(candidateEnd, fullText)
             if (res != null) {
+                // If matched key is /box, show Quick Box
+                if (res.first.key.equals("/box", ignoreCase = true)) {
+                    showFloatingBox(sourceNode, fullText, res.second, cursorIndex)
+                    return
+                }
                 performDirectExpansion(sourceNode, fullText, res.second, cursorIndex, res.first.text)
                 return
             }
         } else {
-            // Mode 2: In-progress typing -> Show Floating Suggestion Popup!
+            // Mode 2: In-progress typing -> Check for "/box" or double comma ",," trigger
+            // 1. Double comma ",," trigger (2 characters)
+            if (cursorIndex >= 2 && fullText.substring(cursorIndex - 2, cursorIndex) == ",,") {
+                hideFloatingSuggestion()
+                showFloatingBox(sourceNode, fullText, cursorIndex - 2, cursorIndex)
+                return
+            }
+            // 2. "/box" trigger (4 characters)
+            if (cursorIndex >= 4) {
+                val candidate = fullText.substring(cursorIndex - 4, cursorIndex)
+                if (candidate.equals("/box", ignoreCase = true)) {
+                    val wordStart = cursorIndex - 4
+                    if (wordStart == 0 || isAtWordBoundary(fullText, wordStart, settings.detectInAllLanguages)) {
+                        hideFloatingSuggestion()
+                        showFloatingBox(sourceNode, fullText, wordStart, cursorIndex)
+                        return
+                    }
+                }
+            }
+
             var matched: ShortcutData? = null
             var matchStart = -1
             var matchEnd = -1
@@ -1089,6 +1135,305 @@ class TextExpanderAccessibilityService : AccessibilityService() {
         }
     }
 
+    private fun showFloatingBox(
+        sourceNode: AccessibilityNodeInfo?,
+        fullText: String,
+        startIndex: Int,
+        endIndex: Int
+    ) {
+        lastActiveEditableNode = sourceNode
+        mainHandler.post {
+            try {
+                if (floatingBoxView == null) {
+                    initFloatingBoxView()
+                }
+                val boxView = floatingBoxView ?: return@post
+
+                etBoxInput?.setText("")
+                switchBoxHumanTyping?.isChecked = false
+
+                val boxDensity = resources.displayMetrics.density
+                val (screenWidth, screenHeight) = getRealScreenDimensions()
+                val marginPx = (14 * boxDensity).toInt()
+                val cardWidth = screenWidth - (marginPx * 2)
+
+                val detectedKbTop = getKeyboardTopOnScreen(screenHeight)
+                val kbTop = detectedKbTop ?: if (lastKnownKeyboardHeight > (screenHeight * 0.18)) {
+                    screenHeight - lastKnownKeyboardHeight
+                } else {
+                    (screenHeight * 0.60).toInt()
+                }
+                val bottomMargin = (screenHeight - kbTop) + (10 * boxDensity).toInt()
+
+                val windowType = WindowManager.LayoutParams.TYPE_ACCESSIBILITY_OVERLAY
+                // Needs focusable for EditText input
+                val flags = WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN or
+                        WindowManager.LayoutParams.FLAG_WATCH_OUTSIDE_TOUCH
+
+                val lp = WindowManager.LayoutParams(
+                    cardWidth,
+                    WindowManager.LayoutParams.WRAP_CONTENT,
+                    windowType,
+                    flags,
+                    PixelFormat.TRANSLUCENT
+                ).apply {
+                    gravity = Gravity.BOTTOM or Gravity.CENTER_HORIZONTAL
+                    y = bottomMargin
+                }
+
+                if (!isFloatingBoxAdded) {
+                    windowManager?.addView(boxView, lp)
+                    isFloatingBoxAdded = true
+                } else {
+                    windowManager?.updateViewLayout(boxView, lp)
+                }
+
+                etBoxInput?.postDelayed({
+                    etBoxInput?.requestFocus()
+                }, 100L)
+
+                // Store target parameters for expansion on Send
+                pendingVariableTargetNode = sourceNode
+                pendingVariableFullText = fullText
+                pendingVariableStart = startIndex
+                pendingVariableEnd = endIndex
+
+            } catch (e: Exception) {
+                Log.e(TAG, "Error displaying floating box", e)
+            }
+        }
+    }
+
+    private fun initFloatingBoxView() {
+        if (floatingBoxView != null) return
+        val contextWrapper = ContextThemeWrapper(this, R.style.Theme_TextExpander)
+        val inflater = LayoutInflater.from(contextWrapper)
+        val view = inflater.inflate(R.layout.layout_floating_box, null)
+        floatingBoxView = view
+
+        etBoxInput = view.findViewById(R.id.etBoxInput)
+        switchBoxHumanTyping = view.findViewById(R.id.switchBoxHumanTyping)
+
+        val layoutHuman = view.findViewById<View>(R.id.layoutBoxHumanTyping)
+        layoutHuman?.setOnClickListener {
+            switchBoxHumanTyping?.let { sw -> sw.isChecked = !sw.isChecked }
+        }
+
+        view.findViewById<View>(R.id.btnBoxClose)?.setOnClickListener {
+            hideFloatingBox()
+        }
+
+        view.findViewById<View>(R.id.btnBoxSend)?.setOnClickListener {
+            val textToInsert = etBoxInput?.text?.toString().orEmpty()
+            val isHuman = switchBoxHumanTyping?.isChecked == true
+            hideFloatingBox()
+
+            if (textToInsert.isNotBlank()) {
+                val node = pendingVariableTargetNode ?: lastActiveEditableNode
+                val fText = pendingVariableFullText
+                val start = pendingVariableStart
+                val end = pendingVariableEnd
+
+                val autoResolved = com.textexpander.app.util.VariableHelper.resolveAutoVariables(textToInsert)
+                val userVars = com.textexpander.app.util.VariableHelper.extractUserInputVariables(autoResolved)
+
+                if (userVars.isNotEmpty()) {
+                    showVariableDialog(node, fText, start, end, autoResolved, userVars, isHuman)
+                } else {
+                    if (isHuman) {
+                        performHumanTypingExpansion(node, fText, start, end, autoResolved)
+                    } else {
+                        performDirectExpansion(node, fText, start, end, autoResolved, fromPopup = true)
+                    }
+                }
+            }
+        }
+
+        view.setOnTouchListener { _, touchEvent ->
+            if (touchEvent.action == MotionEvent.ACTION_OUTSIDE) {
+                hideFloatingBox()
+                true
+            } else {
+                false
+            }
+        }
+    }
+
+    private fun hideFloatingBox() {
+        mainHandler.post {
+            if (isFloatingBoxAdded && floatingBoxView != null) {
+                try {
+                    windowManager?.removeView(floatingBoxView)
+                } catch (e: Exception) {
+                    Log.e(TAG, "Error removing floating box", e)
+                }
+                isFloatingBoxAdded = false
+            }
+        }
+    }
+
+    private fun showVariableDialog(
+        sourceNode: AccessibilityNodeInfo?,
+        fullText: String,
+        startIndex: Int,
+        endIndex: Int,
+        template: String,
+        variables: List<String>,
+        isHumanTyping: Boolean
+    ) {
+        pendingVariableTargetNode = sourceNode
+        pendingVariableFullText = fullText
+        pendingVariableStart = startIndex
+        pendingVariableEnd = endIndex
+        pendingVariableTemplate = template
+
+        mainHandler.post {
+            try {
+                if (floatingVarView == null) {
+                    initFloatingVarView()
+                }
+                val varView = floatingVarView ?: return@post
+
+                switchVarHumanTyping?.isChecked = isHumanTyping
+                layoutVarContainer?.removeAllViews()
+
+                val density = resources.displayMetrics.density
+                val fieldMap = mutableMapOf<String, EditText>()
+
+                for (v in variables) {
+                    val fieldLayout = LinearLayout(this).apply {
+                        orientation = LinearLayout.VERTICAL
+                        val mb = (6 * density).toInt()
+                        setPadding(0, 0, 0, mb)
+                    }
+
+                    val label = TextView(this).apply {
+                        text = v.replace("{", "").replace("}", "").uppercase(Locale.ROOT)
+                        textSize = 10.5f
+                        setTextColor(ContextCompat.getColor(this@TextExpanderAccessibilityService, R.color.text_tertiary))
+                        typeface = Typeface.DEFAULT_BOLD
+                    }
+                    fieldLayout.addView(label)
+
+                    val input = EditText(this).apply {
+                        setBackgroundResource(R.drawable.bg_noir_card)
+                        val p = (8 * density).toInt()
+                        setPadding(p, p, p, p)
+                        setTextColor(ContextCompat.getColor(this@TextExpanderAccessibilityService, R.color.text_primary))
+                        setHintTextColor(ContextCompat.getColor(this@TextExpanderAccessibilityService, R.color.text_tertiary))
+                        hint = "Enter ${v.replace("{", "").replace("}", "")}"
+                        textSize = 13f
+                        isSingleLine = true
+                    }
+                    fieldLayout.addView(input)
+                    layoutVarContainer?.addView(fieldLayout)
+                    fieldMap[v] = input
+                }
+
+                varView.findViewById<View>(R.id.btnVarInsert)?.setOnClickListener {
+                    val values = mutableMapOf<String, String>()
+                    for ((k, et) in fieldMap) {
+                        values[k] = et.text?.toString().orEmpty()
+                    }
+                    val replaced = com.textexpander.app.util.VariableHelper.replaceUserVariables(pendingVariableTemplate, values)
+                    val isHuman = switchVarHumanTyping?.isChecked == true
+                    hideVariableDialog()
+
+                    val node = pendingVariableTargetNode ?: lastActiveEditableNode
+                    val fText = pendingVariableFullText
+                    val start = pendingVariableStart
+                    val end = pendingVariableEnd
+
+                    if (isHuman) {
+                        performHumanTypingExpansion(node, fText, start, end, replaced)
+                    } else {
+                        performDirectExpansion(node, fText, start, end, replaced, fromPopup = true)
+                    }
+                }
+
+                val boxDensity = resources.displayMetrics.density
+                val (screenWidth, screenHeight) = getRealScreenDimensions()
+                val marginPx = (14 * boxDensity).toInt()
+                val cardWidth = screenWidth - (marginPx * 2)
+
+                val detectedKbTop = getKeyboardTopOnScreen(screenHeight)
+                val kbTop = detectedKbTop ?: if (lastKnownKeyboardHeight > (screenHeight * 0.18)) {
+                    screenHeight - lastKnownKeyboardHeight
+                } else {
+                    (screenHeight * 0.60).toInt()
+                }
+                val bottomMargin = (screenHeight - kbTop) + (10 * boxDensity).toInt()
+
+                val windowType = WindowManager.LayoutParams.TYPE_ACCESSIBILITY_OVERLAY
+                val flags = WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN or
+                        WindowManager.LayoutParams.FLAG_WATCH_OUTSIDE_TOUCH
+
+                val lp = WindowManager.LayoutParams(
+                    cardWidth,
+                    WindowManager.LayoutParams.WRAP_CONTENT,
+                    windowType,
+                    flags,
+                    PixelFormat.TRANSLUCENT
+                ).apply {
+                    gravity = Gravity.BOTTOM or Gravity.CENTER_HORIZONTAL
+                    y = bottomMargin
+                }
+
+                if (!isFloatingVarAdded) {
+                    windowManager?.addView(varView, lp)
+                    isFloatingVarAdded = true
+                } else {
+                    windowManager?.updateViewLayout(varView, lp)
+                }
+
+            } catch (e: Exception) {
+                Log.e(TAG, "Error displaying variable dialog", e)
+            }
+        }
+    }
+
+    private fun initFloatingVarView() {
+        if (floatingVarView != null) return
+        val contextWrapper = ContextThemeWrapper(this, R.style.Theme_TextExpander)
+        val inflater = LayoutInflater.from(contextWrapper)
+        val view = inflater.inflate(R.layout.layout_floating_variables, null)
+        floatingVarView = view
+
+        layoutVarContainer = view.findViewById(R.id.layoutVariableFieldsContainer)
+        switchVarHumanTyping = view.findViewById(R.id.switchVarHumanTyping)
+
+        val layoutHuman = view.findViewById<View>(R.id.layoutVarHumanTyping)
+        layoutHuman?.setOnClickListener {
+            switchVarHumanTyping?.let { sw -> sw.isChecked = !sw.isChecked }
+        }
+
+        view.findViewById<View>(R.id.btnVarClose)?.setOnClickListener {
+            hideVariableDialog()
+        }
+
+        view.setOnTouchListener { _, touchEvent ->
+            if (touchEvent.action == MotionEvent.ACTION_OUTSIDE) {
+                hideVariableDialog()
+                true
+            } else {
+                false
+            }
+        }
+    }
+
+    private fun hideVariableDialog() {
+        mainHandler.post {
+            if (isFloatingVarAdded && floatingVarView != null) {
+                try {
+                    windowManager?.removeView(floatingVarView)
+                } catch (e: Exception) {
+                    Log.e(TAG, "Error removing variable dialog", e)
+                }
+                isFloatingVarAdded = false
+            }
+        }
+    }
+
     private fun onFloatingSuggestionTapped() {
         val expansion = currentExpansionText
         val key = currentMatchedKey
@@ -1142,10 +1487,19 @@ class TextExpanderAccessibilityService : AccessibilityService() {
             Pair(fallbackStart, safeLen)
         }
 
+        // First resolve auto variables: {date}, {time}, {day}, {greeting}, {uuid}
+        val autoResolved = com.textexpander.app.util.VariableHelper.resolveAutoVariables(expansion)
+        val userVars = com.textexpander.app.util.VariableHelper.extractUserInputVariables(autoResolved)
+
+        if (userVars.isNotEmpty()) {
+            showVariableDialog(activeNode, fullText, actualStart, actualEnd, autoResolved, userVars, isHumanTyping)
+            return
+        }
+
         if (isHumanTyping) {
-            performHumanTypingExpansion(activeNode, fullText, actualStart, actualEnd, expansion)
+            performHumanTypingExpansion(activeNode, fullText, actualStart, actualEnd, autoResolved)
         } else {
-            performDirectExpansion(activeNode, fullText, actualStart, actualEnd, expansion, fromPopup = true)
+            performDirectExpansion(activeNode, fullText, actualStart, actualEnd, autoResolved, fromPopup = true)
         }
     }
 
@@ -1271,6 +1625,13 @@ class TextExpanderAccessibilityService : AccessibilityService() {
         expandedText: String,
         fromPopup: Boolean = false
     ) {
+        val autoResolved = com.textexpander.app.util.VariableHelper.resolveAutoVariables(expandedText)
+        val userVars = com.textexpander.app.util.VariableHelper.extractUserInputVariables(autoResolved)
+        if (userVars.isNotEmpty()) {
+            showVariableDialog(targetNode, fullText, startIndex, endIndex, autoResolved, userVars, false)
+            return
+        }
+
         if (!isCurrentlyExpanding.compareAndSet(false, true)) {
             return
         }
@@ -1285,12 +1646,12 @@ class TextExpanderAccessibilityService : AccessibilityService() {
             val cursorMarker = "{{cursor}}"
             val baseExpansion: String
             val cursorOffset: Int
-            if (expandedText.contains(cursorMarker)) {
-                cursorOffset = expandedText.indexOf(cursorMarker)
-                baseExpansion = expandedText.replace(cursorMarker, "")
+            if (autoResolved.contains(cursorMarker)) {
+                cursorOffset = autoResolved.indexOf(cursorMarker)
+                baseExpansion = autoResolved.replace(cursorMarker, "")
             } else {
-                cursorOffset = expandedText.length
-                baseExpansion = expandedText
+                cursorOffset = autoResolved.length
+                baseExpansion = autoResolved
             }
 
             val finalExpansion = baseExpansion

@@ -27,6 +27,7 @@ int drawable bg_app_logo_glow 0x0
 int drawable bg_bento_chip 0x0
 int drawable bg_bento_chip_clickable 0x0
 int drawable bg_bottom_nav_indicator 0x0
+int drawable bg_box_send_btn 0x0
 int drawable bg_btn_privacy 0x0
 int drawable bg_circle_arrow 0x0
 int drawable bg_circle_arrow_outline 0x0
@@ -117,6 +118,8 @@ int id bodyStatistics 0x0
 int id bodySuggestion 0x0
 int id btnAboutDeveloper 0x0
 int id btnAboutPrivacyPolicy 0x0
+int id btnBoxClose 0x0
+int id btnBoxSend 0x0
 int id btnCancel 0x0
 int id btnCancelFolder 0x0
 int id btnContinue 0x0
@@ -138,6 +141,8 @@ int id btnSettingsToggleService 0x0
 int id btnShortcutCopy 0x0
 int id btnShortcutMenu 0x0
 int id btnToggleRestrictedGuide 0x0
+int id btnVarClose 0x0
+int id btnVarInsert 0x0
 int id cardAllowBackground 0x0
 int id cardEnableAccessibility 0x0
 int id cardHeaderBanner 0x0
@@ -151,6 +156,7 @@ int id cardSettingStatistics 0x0
 int id cardSettingSuggestion 0x0
 int id cardSettingsAccessibility 0x0
 int id cardSettingsBackground 0x0
+int id etBoxInput 0x0
 int id etExpandedText 0x0
 int id etFolderName 0x0
 int id etSearch 0x0
@@ -184,14 +190,20 @@ int id labelSettings 0x0
 int id labelText 0x0
 int id layoutActionButtons 0x0
 int id layoutBottomNav 0x0
+int id layoutBoxHumanTyping 0x0
 int id layoutEmptyShortcuts 0x0
 int id layoutHumanTyping 0x0
 int id layoutRestrictedDetails 0x0
 int id layoutSearchBar 0x0
 int id layoutSuggestionGrip 0x0
+int id layoutVarHumanTyping 0x0
+int id layoutVariableChipsContainer 0x0
+int id layoutVariableFieldsContainer 0x0
 int id pillHeaderStats 0x0
+int id rootFloatingBox 0x0
 int id rootFolderItem 0x0
 int id rootSuggestionBar 0x0
+int id rootVariableDialog 0x0
 int id rowBackupFolder 0x0
 int id rowBackupInfo 0x0
 int id rowCreateBackup 0x0
@@ -201,6 +213,7 @@ int id rvFolders 0x0
 int id rvShortcuts 0x0
 int id scrollSuggestionText 0x0
 int id scrollViewContent 0x0
+int id switchBoxHumanTyping 0x0
 int id switchDetectAllLanguages 0x0
 int id switchDetectInAllApps 0x0
 int id switchEnableClipboard 0x0
@@ -214,6 +227,7 @@ int id switchMatchFromBeginning 0x0
 int id switchOptimizedDetection 0x0
 int id switchShareStatistics 0x0
 int id switchShowClipboardAccess 0x0
+int id switchVarHumanTyping 0x0
 int id tabClipboard 0x0
 int id tabSettings 0x0
 int id tabText 0x0
@@ -225,6 +239,7 @@ int id tvAboutVersion 0x0
 int id tvActionTitle 0x0
 int id tvBackupFolderPath 0x0
 int id tvBackupInfoDetails 0x0
+int id tvBoxSendLabel 0x0
 int id tvClipboardContent 0x0
 int id tvClipboardCount 0x0
 int id tvExpandedPreview 0x0
@@ -259,7 +274,9 @@ int layout item_clipboard 0x0
 int layout item_dialog_action 0x0
 int layout item_folder_category 0x0
 int layout item_shortcut 0x0
+int layout layout_floating_box 0x0
 int layout layout_floating_suggestion 0x0
+int layout layout_floating_variables 0x0
 int mipmap ic_launcher 0x0
 int mipmap ic_launcher_round 0x0
 int string accessibility_service_description 0x0

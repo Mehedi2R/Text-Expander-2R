@@ -10,8 +10,8 @@ android {
         applicationId = "com.textexpander2r.android"
         minSdk = 26
         targetSdk = 35
-        versionCode = 349
-        versionName = "3.0.49"
+        versionCode = 351
+        versionName = "3.0.51"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }

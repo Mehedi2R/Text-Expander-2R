@@ -54,7 +54,48 @@ class AddEditShortcutActivity : AppCompatActivity() {
             else -> "Root"
         }
         binding.tvFolderBadge.text = "📁 $displayFolder"
+        setupVariableChips()
         updateCounter()
+    }
+
+    private fun setupVariableChips() {
+        val container = binding.layoutVariableChipsContainer
+        container.removeAllViews()
+        val density = resources.displayMetrics.density
+
+        for (v in com.textexpander.app.util.VariableHelper.SUPPORTED_VARIABLES) {
+            val chip = android.widget.TextView(this).apply {
+                text = v
+                textSize = 11.5f
+                setTextColor(ContextCompat.getColor(this@AddEditShortcutActivity, R.color.primary))
+                setBackgroundResource(R.drawable.bg_bento_chip_clickable)
+                val hPad = (10 * density).toInt()
+                val vPad = (4 * density).toInt()
+                setPadding(hPad, vPad, hPad, vPad)
+                val params = android.widget.LinearLayout.LayoutParams(
+                    android.widget.LinearLayout.LayoutParams.WRAP_CONTENT,
+                    android.widget.LinearLayout.LayoutParams.WRAP_CONTENT
+                ).apply {
+                    setMargins(0, 0, (6 * density).toInt(), 0)
+                }
+                layoutParams = params
+                isClickable = true
+                isFocusable = true
+                setOnClickListener {
+                    insertVariableAtCursor(v)
+                }
+            }
+            container.addView(chip)
+        }
+    }
+
+    private fun insertVariableAtCursor(variable: String) {
+        val et = binding.etExpandedText
+        val start = et.selectionStart.coerceAtLeast(0)
+        val end = et.selectionEnd.coerceAtLeast(0)
+        et.text?.replace(Math.min(start, end), Math.max(start, end), variable)
+        et.setSelection(Math.min(start, end) + variable.length)
+        et.requestFocus()
     }
 
     @android.annotation.SuppressLint("ClickableViewAccessibility")
